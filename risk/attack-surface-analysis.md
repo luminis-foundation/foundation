@@ -10,7 +10,7 @@
 ## Top 10 Risks to Address First
 
 | Rank | Risk | Likelihood | Impact | Category |
-|---|---|---|---|
+|---|---|---|
 | 1 | **Founder single point of failure** | High | Critical | Governance / Operations |
 | 2 | **501(c)(3) application denial or delay** | Medium | High | Legal / Compliance |
 | 3 | **Banking pending / needs board-authorized completion** | High | High | Finance / Operations |
@@ -112,22 +112,24 @@ Carlos Garcia is simultaneously President, Founder, Research Director, primary t
 ## 6. Scientific Overclaiming Risk
 
 **Description:**
-Several existing public documents risk creating false impressions about the Foundation's research maturity or organizational status:
-- `luminis-foundation-open` README: "Field deployment (Pecos watershed) — ✅ Building" implies active field deployment when only bench testing is complete and on-site prototype is planned.
-- `luminis-foundation-open` README: "organized under IRC §501(c)(3)" could be read as confirmed tax-exempt status when the application is pending.
+Identified public document risks; two primary overclaims addressed via follow-up PRs:
+- ✅ `luminis-foundation-open` README field deployment and 501(c)(3) language: corrected via luminis-foundation/luminis-foundation-open#6
+- ✅ Website (index.html) VP surname "VanKuijk" → "VanKaujk": corrected via luminis-foundation/luminis-foundation.github.io#4
+
+Remaining risks:
 - The Vercel demo could be mistaken for real sensor data if disclaimers are missed.
 - The preprint on Zenodo is a synthesis/theoretical paper, not an empirical field study — this distinction matters to scientific funders.
-- Website (index.html) lists the VP as "Sterling VanKuijk" — the confirmed legal name is "VanKaujk" (founder-confirmed). A named person listed with an incorrect surname in public materials creates credibility issues with funders and legal reviewers conducting due diligence.
+- Zenodo preprint author name (VanKaujk vs VanKuijk) needs verification; correction request may be needed.
 
 | Attribute | Value |
 |---|---|
-| Likelihood | Medium (language exists in public repos; website error is live) |
+| Likelihood | Low (primary overclaims corrected in follow-up PRs; ongoing risk from future edits and unverified Zenodo record) |
 | Impact | High (IRS scrutiny, funder loss of trust, reputational damage, potential misrepresentation) |
-| Current controls | Website uses accurate 501(c)(3) language; MycoSense README correctly labels demo as simulated; FIELD_STATUS.md is accurate |
-| Missing controls | Consistent language across all public repos; VP surname corrected in website source; no single source of truth for approved status claims |
-| Mitigation | Audit all public repos for status claims; align luminis-foundation-open README; fix VP surname in index.html (PR to luminis-foundation.github.io); use knowledge-graph/foundation-map.md as the approved status reference |
+| Current controls | Website uses accurate 501(c)(3) language; MycoSense README correctly labels demo as simulated; FIELD_STATUS.md is accurate; luminis-foundation-open README corrected via PR #6 |
+| Missing controls | Consistent language across all public repos; no single source of truth for approved status claims; Zenodo preprint author name unverified |
+| Mitigation | Primary overclaims corrected via follow-up PRs; use knowledge-graph/foundation-map.md as the approved status reference for all future claims; audit remaining repos for status claims before next grant submission |
 | Owner | Carlos Garcia |
-| Next action | (P0) Fix index.html VP surname; (P1) Update luminis-foundation-open README field deployment status and 501(c)(3) language |
+| Next action | (✅ Done) Website VP surname corrected via luminis-foundation/luminis-foundation.github.io#4; (✅ Done) luminis-foundation-open README corrected via luminis-foundation/luminis-foundation-open#6; (P1) Verify Zenodo preprint author name; audit remaining repos |
 
 ---
 
@@ -207,17 +209,17 @@ The Foundation has one pending grant ($1,000 microgrant) and no other funding pi
 ## 11. Public Communications Risk
 
 **Description:**
-Inconsistent or inaccurate public statements about the Foundation's status — 501(c)(3) approval, field deployment completeness, data validity, or research maturity — carry reputational and legal risk. Public statements appear across a website, 4 GitHub repos, a published preprint, and AI-generated content. A specific confirmed P0 error: the Foundation website source (index.html) lists the VP's surname as "VanKuijk" while the correct legal name is "VanKaujk" (founder-confirmed). This error is live and public; a funder or legal reviewer performing due diligence will find it.
+Inconsistent or inaccurate public statements about the Foundation's status — 501(c)(3) approval, field deployment completeness, data validity, or research maturity — carry reputational and legal risk. Public statements appear across a website, 4 GitHub repos, a published preprint, and AI-generated content. Two confirmed errors have been corrected via follow-up PRs: website VP surname (luminis-foundation/luminis-foundation.github.io#4) and luminis-foundation-open README overclaims (luminis-foundation/luminis-foundation-open#6). Remaining risk: Zenodo preprint author name (VanKaujk vs VanKuijk) needs verification.
 
 | Attribute | Value |
 |---|---|
-| Likelihood | Medium (inconsistency already detected in luminis-foundation-open README and website source) |
+| Likelihood | Low–Medium (primary inconsistencies corrected; ongoing risk from future edits and unverified Zenodo record) |
 | Impact | High (IRS scrutiny; funder distrust; reputational damage) |
-| Current controls | Website and MycoSense README use accurate language; FIELD_STATUS.md is authoritative |
-| Missing controls | VP surname corrected in index.html; consistent language policy across all repos; single approved status statement |
-| Mitigation | (P0) Fix VP surname in index.html via PR to luminis-foundation.github.io; adopt a "Public Status Language Standard"; audit all repos before each grant submission |
+| Current controls | Website and MycoSense README use accurate language; FIELD_STATUS.md is authoritative; luminis-foundation-open README corrected via PR #6 |
+| Missing controls | Consistent language policy across all repos; single approved status statement; Zenodo preprint author name unverified |
+| Mitigation | VP surname and README overclaims corrected via follow-up PRs; adopt a "Public Status Language Standard"; audit all repos before each grant submission |
 | Owner | Carlos Garcia |
-| Next action | Fix index.html VP surname; fix luminis-foundation-open README overclaiming language; create a status language reference doc |
+| Next action | Verify Zenodo preprint author name; create a status language reference doc; enable quarterly repo audits before grant submissions |
 
 ---
 
@@ -348,10 +350,11 @@ The planned Step 3 deployment is at the Foundation's office site in Rowe, NM —
 | NM incorporation complete; entity in good standing | ✅ Pub | `governance/mission.md`, `governance/milestones.md` |
 | 501(c)(3) applied for; determination pending | ✅ Pub | `governance/milestones.md`; website |
 | Banking not yet established | 🗣️ Founder | Open item in `governance/roadmap.md`; confirmed pending |
-| VP legal name is "VanKaujk" | 🗣️ Founder | Confirmed by founder; contradicted by website source |
-| Website has VP surname error ("VanKuijk") | ⚠️ Conflict | `luminis-foundation.github.io/index.html` vs founder confirmation |
-| luminis-foundation-open README overclaims field deployment | ✅ Pub | `luminis-foundation-open/README.md` |
+| VP legal name is "VanKaujk" | ✅ Pub + 🗣️ Founder | Confirmed by founder; website corrected via luminis-foundation/luminis-foundation.github.io#4 |
+| Website VP surname corrected to "VanKaujk" | ✅ Pub | luminis-foundation/luminis-foundation.github.io#4 merged |
+| luminis-foundation-open README overclaims corrected | ✅ Pub | luminis-foundation/luminis-foundation-open#6 merged |
 | VITE_PI_TOKEN risk (not currently set in Vercel) | ❓ Unknown | Risk is documented in SECURITY.md; current Vercel env var state unconfirmed |
 | No validated public field dataset | ✅ Pub | `research/datasets/` empty; `mycosense/FIELD_STATUS.md` |
 | No board minutes in public repo | ✅ Pub | `governance/board-minutes/` empty in this repo |
 | No financial controls policy documented | ✅ Pub | No such document found in any public repo |
+| Zenodo preprint author spelling | ⚠️ Unverified | Needs manual check; correction request may be needed |

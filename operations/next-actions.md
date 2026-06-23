@@ -26,7 +26,7 @@
 | Priority | Action | Owner | Effort | Reason | Acceptance Criteria |
 |---|---|---|---|---|---|
 | P0 | Confirm signed organizational meeting minutes are retained as a private record; create a public-safe index or template if desired | Guillermo Martin | Small | Confirms bylaws adoption, officer elections — foundational governance record | Signed copy confirmed retained privately; public-safe index or template created if desired |
-| P0 | Fix VP surname in Foundation website source: luminis-foundation.github.io/index.html — change "VanKuijk" → "VanKaujk" | Carlos Garcia | Small | P0 error: founder has confirmed legal name is "VanKaujk"; website has incorrect "VanKuijk"; funder due diligence will catch this | PR merged to luminis-foundation.github.io; website displays "VanKaujk" |
+| ✅ Done | Fix VP surname in Foundation website source: luminis-foundation.github.io/index.html | Carlos Garcia | Small | Corrected via luminis-foundation/luminis-foundation.github.io#4 | ✅ PR merged; website displays "VanKaujk" |
 | P1 | Verify Zenodo preprint VP author name spelling; request Zenodo correction if listed as "VanKuijk" | Carlos Garcia | Small | Author record must align with confirmed legal name | Zenodo record checked; correction request submitted if needed |
 | P1 | Schedule Q3 2026 board meeting | Carlos Garcia | Small | Governance cadence; review foundation status, research plan, budget | Board meeting held; minutes recorded |
 | P1 | Ensure all officers have access to key accounts | Carlos Garcia | Small | Founder dependency risk — single point of failure | Adam has banking access once established; Guillermo has NM SOS access; at least 2 people can access GitHub org |
@@ -86,9 +86,9 @@
 
 | Priority | Action | Owner | Effort | Reason | Acceptance Criteria |
 |---|---|---|---|---|---|
-| P0 | Fix VP surname in Foundation website source (index.html: VanKuijk → VanKaujk) | Carlos Garcia | Small | P0 error confirmed by founder; live public website has incorrect surname; requires PR to luminis-foundation.github.io | index.html updated; website displays "Sterling VanKaujk" |
-| P1 | Fix overclaiming language in `luminis-foundation-open` README | Carlos Garcia | Small | "Field deployment ✅ Building" overstates actual status; IRS and funder risk | README updated to: "Controlled on-site prototype deployment — planned" |
-| P1 | Fix 501(c)(3) language in `luminis-foundation-open` README | Carlos Garcia | Small | "organized under IRC §501(c)(3)" could be read as confirmed status | Language updated to "applied for recognition under IRC §501(c)(3)" |
+| ✅ Done | Fix VP surname in Foundation website source (index.html: VanKuijk → VanKaujk) | Carlos Garcia | Small | Corrected via luminis-foundation/luminis-foundation.github.io#4 | ✅ PR merged; website displays "Sterling VanKaujk" |
+| ✅ Done | Fix overclaiming language in `luminis-foundation-open` README | Carlos Garcia | Small | Corrected via luminis-foundation/luminis-foundation-open#6 | ✅ PR merged; deployment table updated: simulated dashboard / bench-tested hardware / Rowe on-site prototype planned / Pecos future |
+| ✅ Done | Fix 501(c)(3) language in `luminis-foundation-open` README | Carlos Garcia | Small | Corrected via luminis-foundation/luminis-foundation-open#6 | ✅ PR merged; language updated to "applied for recognition under IRC §501(c)(3); determination pending" |
 | P2 | Add privacy policy to Foundation website | Carlos Garcia | Small | Best practice; required if any data is collected through the site | Privacy policy page added |
 | P2 | Add "Open Research" section linking luminis-foundation-open | Carlos Garcia | Small | Website does not prominently link the open research repo | Section added to index.html |
 | P3 | Add Foundation blog or research updates section | Carlos Garcia | Medium | Communicates research progress to funders and community | At least one update published post-Step 3 |
@@ -152,7 +152,7 @@ Ranked by institutional value. Each is scoped, executable, and produces a commit
 | 2 | **Write field data quality SOP** | Draft `research/protocols/field-data-quality-sop.md` based on metadata schema and quality requirements in the research roadmap audit | SOP ready for Step 3 | `docs/field-data-quality-sop` |
 | 3 | **Add publication record** | Create `research/publications/2026-zenodo-20143391.md` with full citation, abstract summary, CC-BY license note, and relationship to MycoSense | Publication record committed | `docs/publication-records` |
 | 4 | **Draft data management plan** | Create `research/data-management-plan.md` covering: data types, storage, retention, sharing, privacy, Zenodo upload procedure, versioning | DMP ready for grant submissions | `docs/data-management-plan` |
-| 5 | **Fix P0 website + open-repo public-claims errors** | (a) PR to luminis-foundation.github.io: fix index.html VP surname VanKuijk → VanKaujk (founder-confirmed). (b) PR to luminis-foundation-open: update README field deployment language and 501(c)(3) language to accurate conservative phrasing | Two PRs; both merged | `fix/website-surname-p0`, `fix/open-readme-claims` |
+| 5 | ✅ **Fix P0 website + open-repo public-claims errors** | (a) luminis-foundation/luminis-foundation.github.io#4: VP surname VanKuijk → VanKaujk — merged. (b) luminis-foundation/luminis-foundation-open#6: README field deployment and 501(c)(3) language corrected — merged | ✅ Both PRs merged | `fix/vp-surname-vankaujk`, `fix/readme-public-claims` |
 | 6 | **Draft board meeting agenda template** | Create a reusable board meeting agenda template in `governance/board-minutes/` covering standard NM nonprofit agenda items | Template committed | `docs/board-meeting-template` |
 | 7 | **Write volunteer contribution agreement** | Draft a simple 1-page volunteer contributor agreement covering IP assignment, scope, and Foundation IP | Agreement template committed | `docs/volunteer-agreement` |
 | 8 | **Draft hardware specification document** | Create `research/protocols/hardware-spec.md` documenting ESP32-C6/S3 model, ADC board, electrode type, Pi model, power system — all with part numbers | Hardware spec committed | `docs/hardware-spec` |
@@ -171,9 +171,9 @@ Complete all items before submitting any grant application. Review with Carlos G
 
 | Item | Owner | Status |
 |---|---|---|
-| Fix VP surname in Foundation website (index.html): VanKuijk → VanKaujk | Carlos Garcia | ⬜ Pending |
-| Fix field deployment language in luminis-foundation-open README: remove "✅ Building" overclaim | Carlos Garcia | ⬜ Pending |
-| Fix 501(c)(3) language in luminis-foundation-open README: "organized under IRC §501(c)(3)" → "applied for recognition" | Carlos Garcia | ⬜ Pending |
+| Fix VP surname in Foundation website (index.html): VanKuijk → VanKaujk | Carlos Garcia | ✅ Done (luminis-foundation/luminis-foundation.github.io#4 merged) |
+| Fix field deployment language in luminis-foundation-open README: remove "✅ Building" overclaim | Carlos Garcia | ✅ Done (luminis-foundation/luminis-foundation-open#6 merged) |
+| Fix 501(c)(3) language in luminis-foundation-open README: "organized under IRC §501(c)(3)" → "applied for recognition" | Carlos Garcia | ✅ Done (luminis-foundation/luminis-foundation-open#6 merged) |
 | Initiate banking (pending / needs board-authorized completion) | Adam Kimble | ⬜ Pending |
 | Confirm no EIN committed to any public repo | Carlos Garcia | ⬜ Verify |
 | Confirm no Pay.gov receipt, bank/routing/account details in any public repo | Carlos Garcia | ⬜ Verify |
@@ -214,7 +214,7 @@ Do not include or attach the following in any materials committed to a public re
 | 501(c)(3) applied | ✅ Filed Jun 9, 2026 |
 | 501(c)(3) determination received | ❌ Pending IRS |
 | Banking established | ⬜ Pending / needs board-authorized completion |
-| Website public-claims accurate | ⚠️ P0 error: VP surname in index.html; P1: luminis-foundation-open overclaims |
+| Website public-claims accurate | ✅ Done — VP surname corrected via luminis-foundation.github.io#4; README overclaims corrected via luminis-foundation-open#6 |
 | Research protocols documented | ❌ Not yet written |
 | Data management plan | ❌ Not yet written |
 | Field data exists | ❌ Simulated only — Step 3 not yet started |

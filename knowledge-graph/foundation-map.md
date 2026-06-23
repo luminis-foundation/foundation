@@ -53,7 +53,7 @@
 | Carlos Garcia | President, Founder, Research Director | carlos@luminisfoundationresearch.org | ✅ Active | Primary technical and research lead; single point of failure risk |
 | Guillermo Martin | Secretary | — | ✅ Active | Board minutes and filing responsibilities |
 | Adam Kimble | Treasurer | adam@luminisfoundationresearch.org | ✅ Active | Financial oversight; banking pending / needs board-authorized completion |
-| Sterling VanKaujk | Vice President | sterling@luminisfoundationresearch.org | ✅ Active | 🗣️ Legal name confirmed by founder as "VanKaujk". ⚠️ P0 Error: Website source (index.html) lists "VanKuijk" — incorrect; requires separate PR to luminis-foundation.github.io |
+| Sterling VanKaujk | Vice President | sterling@luminisfoundationresearch.org | ✅ Active | 🗣️ Legal name confirmed by founder as "VanKaujk". ✅ Website surname corrected via luminis-foundation/luminis-foundation.github.io#4 |
 
 **Board gap notes:**
 - No succession plan documented for any officer
@@ -76,7 +76,7 @@
 - MycoSense status on website: "Prototype planned" ✅ Correct
 - Simulated data disclaimer: Present ✅
 - No CSP issues noted; strict `default-src 'none'` base ✅
-- ⚠️ **P0 Error:** Website source (index.html) lists VP as "Sterling VanKuijk" — correct spelling is "VanKaujk" (founder-confirmed); requires separate PR to luminis-foundation.github.io
+- ✅ **P0 Resolved:** VP surname corrected in website source (index.html) via luminis-foundation/luminis-foundation.github.io#4
 
 ---
 
@@ -87,13 +87,12 @@
 | `luminis-foundation/foundation` | Institutional records (this repo) | ✅ Active | governance/, research/, knowledge-graph/, risk/, operations/ | Board minutes, annual reports, bylaws text not publicly present in repo |
 | `luminis-foundation/mycosense` | MycoSense platform (dashboard + firmware + Pi) | ✅ Active | README.md, FIELD_STATUS.md, SECURITY.md, docs/ | Field protocols, calibration docs absent |
 | `luminis-foundation/luminis-foundation-open` | Public research + community | ✅ Active | governance/, research/, field-deployment/ | field-deployment/protocols/, field-deployment/site-specs/ empty; publications/ empty |
-| `luminis-foundation/luminis-foundation.github.io` | Foundation website source | ✅ Active | index.html, luminis-banner.jpg, luminis-logo.jpg | ⚠️ P0 Error: VP surname "VanKuijk" in source (confirmed correct: VanKaujk); no privacy policy; no contact form |
+| `luminis-foundation/luminis-foundation.github.io` | Foundation website source | ✅ Active | index.html, luminis-banner.jpg, luminis-logo.jpg | ✅ VP surname corrected to "VanKaujk" via luminis-foundation/luminis-foundation.github.io#4; no privacy policy; no contact form |
 | `luminis-foundation/security-hardening` | Security documentation | ❓ Unknown | — | Not yet inspected in this audit |
 
 **Repo audit notes:**
-- `luminis-foundation-open` README: "Field deployment (Pecos watershed) — ✅ Building" ⚠️ Overclaim risk — should be "in development / bench-tested; on-site prototype planned"
-- `luminis-foundation-open` README: "organized under IRC §501(c)(3)" ⚠️ Overclaim risk — should clarify "applied for recognition under IRC §501(c)(3)"
-- `luminis-foundation.github.io` index.html: VP listed as "Sterling VanKuijk" ⚠️ P0 Error — correct spelling is "VanKaujk" (founder-confirmed); fix requires PR to that repo
+- ✅ `luminis-foundation-open` README field deployment and 501(c)(3) language: corrected via luminis-foundation/luminis-foundation-open#6
+- ✅ `luminis-foundation.github.io` VP surname: corrected to "VanKaujk" via luminis-foundation/luminis-foundation.github.io#4
 
 ---
 
@@ -140,7 +139,7 @@
 | NM Certificate of Incorporation | ✅ Issued | Mar 16, 2026 | Not publicly present in repo — do not commit PDF |
 | Bylaws | ✅ Adopted by Board | Mar 19, 2026 | Not publicly present in repo — consider redacted summary |
 | Conflict-of-interest policy | ✅ Adopted by Board | Mar 19, 2026 | Not publicly present in repo — consider redacted version |
-| NM Initial Report | ✅ Filed | May 7, 2026 | Adds Sterling VanKaujk as VP (⚠️ website source has 'VanKuijk' — error requiring separate PR to luminis-foundation.github.io) |
+| NM Initial Report | ✅ Filed | May 7, 2026 | Adds Sterling VanKaujk as VP (✅ website surname corrected via luminis-foundation/luminis-foundation.github.io#4) |
 | Form 1023-EZ | ✅ Filed | Jun 9, 2026 | $275 user fee paid Jun 10; IRS determination pending |
 | NM-COROS registration | ⬜ Not filed | — | Required if soliciting in NM; file after IRS determination |
 | Federal EIN | ❓ Not in public records | — | Do not commit — keep private |
@@ -213,7 +212,6 @@
 |---|---|---|---|
 | Has an EIN been assigned by the IRS? | Legal/compliance | Carlos Garcia | P0 |
 | What specifically is blocking banking establishment, and who has board authorization to initiate it? | Finance | Adam Kimble | P0 |
-| Has the VP surname error in the website source (index.html: VanKuijk) been corrected? | Communications | Carlos Garcia | P0 |
 | Does the Zenodo preprint list "VanKuijk" or "VanKaujk" as the author? | Records | Carlos Garcia | P1 |
 | When is the NM-COROS charitable registration required? | Legal/compliance | Carlos Garcia | P1 |
 | Are there bench-test data logs from ESP32/Pi that should be preserved? | Research/data | Carlos Garcia | P1 |
@@ -261,11 +259,10 @@
 | Decision | Deadline | Owner | Stakes |
 |---|---|---|---|
 | Initiate banking (pending / needs board-authorized completion) | ASAP — blocks financial operations | Adam Kimble | Cannot receive grants, manage expenses, or pay fees |
-| Fix VP surname in website source: luminis-foundation.github.io/index.html — change "VanKuijk" → "VanKaujk" | P0 — immediately | Carlos Garcia | Public error confirmed by founder; undermines trust with funders and legal reviewers; requires PR to luminis-foundation.github.io |
+| ✅ Fix VP surname in website source: luminis-foundation.github.io/index.html | Resolved | Carlos Garcia | Corrected via luminis-foundation/luminis-foundation.github.io#4 |
 | Verify Zenodo preprint VP author name; request Zenodo correction if listed as "VanKuijk" | P1 | Carlos Garcia | Author record accuracy; must align with confirmed legal name |
 | Determine NM-COROS registration requirement | After 501(c)(3) determination | Carlos Garcia | Legal compliance for NM charitable solicitation |
-| Revise luminis-foundation-open README: field deployment status language | P1 | Carlos Garcia | "✅ Building" overstates status — overclaim risk with funders |
-| Revise luminis-foundation-open README: 501(c)(3) language | P1 | Carlos Garcia | "organized under IRC §501(c)(3)" could be misread as confirmed status |
+| ✅ Revise luminis-foundation-open README: field deployment and 501(c)(3) language | Resolved | Carlos Garcia | Corrected via luminis-foundation/luminis-foundation-open#6 |
 | Set Step 3 deployment date | P1 | Carlos Garcia | Unlocks research program, grant eligibility |
 | Draft and adopt financial controls policy | P1 | Adam Kimble | Required for IRS compliance and grant accountability |
 | Draft field and calibration protocols | Before Step 3 | Carlos Garcia | Research credibility; data quality |
@@ -295,8 +292,9 @@
 | NM Initial Report filed May 7, 2026 | ✅ Pub | `governance/milestones.md` |
 | Form 1023-EZ filed June 9, 2026; $275 fee June 10 | ✅ Pub | `governance/milestones.md` |
 | 501(c)(3) applied for — determination not yet received | ✅ Pub | `governance/milestones.md`; website |
-| VP legal name is "VanKaujk" | 🗣️ Founder | Confirmed by founder; contradicted by website source |
-| Website (index.html) has "VanKuijk" — error | ⚠️ Conflict | `luminis-foundation.github.io/index.html` vs founder confirmation |
+| VP legal name is "VanKaujk" | ✅ Pub + 🗣️ Founder | Confirmed by founder; website corrected via luminis-foundation/luminis-foundation.github.io#4 |
+| Website VP surname corrected to "VanKaujk" | ✅ Pub | luminis-foundation/luminis-foundation.github.io#4 merged |
+| luminis-foundation-open README overclaims corrected | ✅ Pub | luminis-foundation/luminis-foundation-open#6 merged |
 | Banking not yet established | 🗣️ Founder | Open item in `governance/roadmap.md`; confirmed as pending |
 | EIN assigned or not | ❓ Unknown | Not in public records; keep private |
 | ESP32 + Pi bench-validated end-to-end | ✅ Pub | `mycosense/FIELD_STATUS.md` |
@@ -305,3 +303,4 @@
 | Preprint published — DOI 10.5281/zenodo.20143391 | ✅ Pub | `governance/milestones.md` |
 | Awesome Foundation grant pending ($1,000) | ✅ Pub | `governance/grants.md` |
 | Bylaws / COI text / board minutes exist | ❓ Unknown (public) / 📋 Legal (private) | Not publicly present in repo; existence inferred from milestones |
+| Zenodo preprint author spelling | ⚠️ Unverified | Needs manual check; correction request may be needed |
