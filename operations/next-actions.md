@@ -10,11 +10,11 @@
 
 | Priority | Action | Owner | Effort | Reason | Acceptance Criteria |
 |---|---|---|---|---|---|
-| P0 | Initiate banking (pending / needs board-authorized completion) | Adam Kimble | Medium | Blocks receiving grants, paying expenses, and financial accountability | Bank account open; signatories established; Adam and Carlos have access |
+| ✅ Done | Banking established — board-authorized institutional bank account opened | Adam Kimble | — | Banking established 2026-06-23; account details retained privately by authorized officers | ✅ Bank account established |
 | P0 | Await and log IRS correspondence | Carlos Garcia | Small | 1023-EZ filed Jun 9 — monitor for IRS questions or determination letter | IRS determination letter received and filed privately; status updated in foundation-map.md |
+| P1 | Review and adopt financial controls policy | Adam Kimble + Board | Small | Draft at `governance/financial-controls-policy.md`; IRS compliance; grant accountability | Board reviews draft; policy adopted; effective date recorded in Board minutes |
 | P1 | Confirm NM-COROS registration requirement | Carlos Garcia | Small | Required if Foundation solicits charitable contributions in NM | Decision documented; registration filed if required |
 | P1 | Create compliance calendar | Carlos Garcia, Adam Kimble | Small | Annual NM SOS report, IRS 990/990-N, NM-COROS renewals — all have deadlines | Calendar created with all annual deadlines for 2026–2028 |
-| P1 | Draft and adopt financial controls policy | Adam Kimble | Medium | IRS compliance; grant accountability; good governance practice | Policy adopted by Board; stored privately |
 | P2 | Review bylaws for quorum and vacancy procedures | Carlos Garcia, Guillermo Martin | Small | Board continuity risk; need to understand quorum with 4-member board | Quorum and vacancy procedures reviewed; documented in private board notes |
 | P2 | Draft redacted bylaws summary for public repo | Carlos Garcia | Small | Governance transparency for grant reviewers | Redacted summary committed to `governance/bylaws-summary.md` |
 | P2 | File NM-COROS registration (if required) | Carlos Garcia | Small | Post-IRS determination | Registration filed or requirement confirmed not applicable |
@@ -27,9 +27,9 @@
 |---|---|---|---|---|---|
 | P0 | Confirm signed organizational meeting minutes are retained as a private record; create a public-safe index or template if desired | Guillermo Martin | Small | Confirms bylaws adoption, officer elections — foundational governance record | Signed copy confirmed retained privately; public-safe index or template created if desired |
 | ✅ Done | Fix VP surname in Foundation website source: luminis-foundation.github.io/index.html | Carlos Garcia | Small | Corrected via luminis-foundation/luminis-foundation.github.io#4 | ✅ PR merged; website displays "VanKaujk" |
-| P1 | Verify Zenodo preprint VP author name spelling; request Zenodo correction if listed as "VanKuijk" | Carlos Garcia | Small | Author record must align with confirmed legal name | Zenodo record checked; correction request submitted if needed |
+| P2 | Confirm Zenodo author record | Carlos Garcia | Small | Zenodo author concern reviewed 2026-06-23 — current known author: Carlos Garcia; no correction needed unless discrepancy found | Zenodo record confirmed; no action needed unless discrepancy found |
 | P1 | Schedule Q3 2026 board meeting | Carlos Garcia | Small | Governance cadence; review foundation status, research plan, budget | Board meeting held; minutes recorded |
-| P1 | Ensure all officers have access to key accounts | Carlos Garcia | Small | Founder dependency risk — single point of failure | Adam has banking access once established; Guillermo has NM SOS access; at least 2 people can access GitHub org |
+| P1 | Ensure all officers have access to key accounts | Carlos Garcia | Small | Founder dependency risk — single point of failure | Adam has banking access; Guillermo has NM SOS access; at least 2 people can access GitHub org |
 | P2 | Evaluate board expansion | Board | Medium | 4-person board is small; independent director(s) would strengthen governance | Board discusses expansion; target 5–7 members within 12 months |
 | P2 | Create private "operations and credentials" document | Carlos Garcia | Medium | Founder dependency; all key accounts, contacts, and credentials should be accessible to board in emergency | Document created; stored securely offline or in private repo accessible to Board |
 | P3 | Draft board member agreement/expectations | Carlos Garcia | Small | Volunteer expectations; time commitment; fiduciary duty | Board member agreement drafted and signed |
@@ -40,11 +40,11 @@
 
 | Priority | Action | Owner | Effort | Reason | Acceptance Criteria |
 |---|---|---|---|---|---|
-| P0 | Write calibration protocol | Carlos Garcia | Medium | Required before Step 3; data without calibration records is unusable | `research/protocols/calibration-protocol.md` committed and reviewed |
-| P0 | Write field data quality SOP | Carlos Garcia | Medium | Required before Step 3; defines what "valid data" means | `research/protocols/field-data-quality-sop.md` committed and reviewed |
+| P1 | Review calibration protocol framework | Carlos Garcia | Small | Draft framework at `research/protocols/calibration-protocol-framework.md`; final thresholds are funding-dependent | Carlos Garcia reviews framework; equipment list confirmed; final validated protocol deferred to post-funding |
+| P1 | Review field data quality SOP framework | Carlos Garcia | Small | Draft framework at `research/protocols/field-data-quality-sop-framework.md`; final thresholds are funding-dependent | Carlos Garcia reviews framework; metadata requirements confirmed; pilot data needed before final thresholds |
+| P1 | Review data management and security brainstorm; answer open questions | Carlos Garcia | Medium | Brainstorm at `research/data-management-security-brainstorm.md`; Carlos needs to answer open questions before final policy can be drafted | Open questions answered; final data management policy ready to draft |
 | P1 | Define metadata schema | Carlos Garcia | Small | Required before any dataset is collected | JSON schema committed to `research/protocols/metadata-schema.json` |
 | P1 | Add publication record to `research/publications/` | Carlos Garcia | Small | Repository is empty; preprint DOI should be documented | `research/publications/2026-zenodo-20143391.md` committed |
-| P1 | Draft data management plan | Carlos Garcia | Medium | Required by most funders; defines storage, retention, sharing, privacy | Data management plan committed to `research/` or available for grant submissions |
 | P2 | Design TinyML classifier architecture | Carlos Garcia | Large | Mid-term research milestone per `governance/roadmap.md` | Classifier architecture documented; training approach defined |
 | P2 | Write follow-on technical preprint: field deployment protocol | Carlos Garcia | Large | Documents the methodology before empirical data is available | Preprint drafted; submitted to Zenodo |
 | P2 | Define seasonal monitoring plan for Rowe, NM site | Carlos Garcia | Small | High-desert conditions; monsoon season timing; seasonal biology affects signals | Seasonal plan documented in `research/protocols/` |
@@ -75,7 +75,7 @@
 |---|---|---|---|---|---|
 | P0 | Monitor Awesome Foundation application | Carlos Garcia | Small | $1,000 pending; first grant | Application result recorded in `governance/grants.md` |
 | P1 | Identify 5 grant opportunities for next cycle | Carlos Garcia, Lumen | Medium | No funding pipeline exists; 501(c)(3) pending will unlock more options | 5 opportunities identified with deadlines, amounts, requirements, and eligibility |
-| P1 | Draft data management plan (dual use: grants + research) | Carlos Garcia | Medium | Most environmental and technology funders require it | Plan drafted; reviewed by Lumen |
+| P1 | Convert data management brainstorm to grant-ready DMP | Carlos Garcia | Medium | Most environmental and technology funders require a DMP; brainstorm at `research/data-management-security-brainstorm.md` | DMP drafted based on brainstorm decisions; reviewed by Lumen |
 | P2 | Draft 12-month operating budget | Adam Kimble | Medium | Required for most grant applications; defines realistic ask | Budget drafted; reviewed by Board |
 | P2 | Apply to environmental and tech foundations (post-IRS determination) | Carlos Garcia | Large | 501(c)(3) determination unlocks most institutional grants | Applications submitted to ≥ 3 funders |
 | P3 | Investigate NSF SBIR/STTR or NSF BIO program eligibility | Carlos Garcia | Medium | Federal funding for ecological sensor research | Eligibility determination; letter of intent drafted if eligible |
@@ -99,9 +99,9 @@
 
 | Priority | Action | Owner | Effort | Reason | Acceptance Criteria |
 |---|---|---|---|---|---|
-| P0 | Write calibration protocol (see Research above) | Carlos Garcia | Medium | No calibration protocol = no valid data | Protocol committed |
+| P1 | Review calibration protocol framework (see Research above) | Carlos Garcia | Small | Framework exists; final thresholds funding-dependent | Framework reviewed and confirmed by Carlos |
 | P1 | Write metadata schema | Carlos Garcia | Small | Defined before first data collection | Schema committed |
-| P1 | Write data quality SOP | Carlos Garcia | Medium | Defines what counts as a valid reading | SOP committed |
+| P1 | Review field data quality SOP framework | Carlos Garcia | Small | Framework exists; final thresholds funding-dependent | Framework reviewed and confirmed by Carlos |
 | P2 | Set up local backup for Pi SQLite database | Carlos Garcia | Small | Disk failure risk during deployment | Backup procedure documented and tested |
 | P3 | Research Zenodo dataset upload workflow | Carlos Garcia | Small | Needed for Step 4 public dataset release | Zenodo upload procedure documented |
 
@@ -148,10 +148,10 @@ Ranked by institutional value. Each is scoped, executable, and produces a commit
 
 | Rank | Task | Description | Output | Branch |
 |---|---|---|---|---|
-| 1 | **Write calibration protocol** | Draft `research/protocols/calibration-protocol.md` based on ADS1115/ADS1299 electrode systems; include reference signal, deviation threshold, temperature compensation notes | Protocol document ready for Carlos review | `docs/calibration-protocol` |
-| 2 | **Write field data quality SOP** | Draft `research/protocols/field-data-quality-sop.md` based on metadata schema and quality requirements in the research roadmap audit | SOP ready for Step 3 | `docs/field-data-quality-sop` |
+| 1 | **Review calibration protocol framework** | Carlos Garcia reviews `research/protocols/calibration-protocol-framework.md` — confirm equipment list, approve metadata requirements, note any corrections; framework is funding-dependent and cannot be finalized without pilot data | Carlos review notes documented | — |
+| 2 | **Review field data quality SOP framework** | Carlos Garcia reviews `research/protocols/field-data-quality-sop-framework.md` — confirm field notes template, metadata requirements, and NTP requirements; final thresholds deferred to post-pilot | Carlos review notes documented | — |
 | 3 | **Add publication record** | Create `research/publications/2026-zenodo-20143391.md` with full citation, abstract summary, CC-BY license note, and relationship to MycoSense | Publication record committed | `docs/publication-records` |
-| 4 | **Draft data management plan** | Create `research/data-management-plan.md` covering: data types, storage, retention, sharing, privacy, Zenodo upload procedure, versioning | DMP ready for grant submissions | `docs/data-management-plan` |
+| 4 | **Answer data management open questions** | Review `research/data-management-security-brainstorm.md` — answer the 10 open questions (cloud backup service, GPS precision, access roles, encryption, retention period); answers feed into final data management policy | Open questions answered; final policy ready to draft | — |
 | 5 | ✅ **Fix P0 website + open-repo public-claims errors** | (a) luminis-foundation/luminis-foundation.github.io#4: VP surname VanKuijk → VanKaujk — merged. (b) luminis-foundation/luminis-foundation-open#6: README field deployment and 501(c)(3) language corrected — merged | ✅ Both PRs merged | `fix/vp-surname-vankaujk`, `fix/readme-public-claims` |
 | 6 | **Draft board meeting agenda template** | Create a reusable board meeting agenda template in `governance/board-minutes/` covering standard NM nonprofit agenda items | Template committed | `docs/board-meeting-template` |
 | 7 | **Write volunteer contribution agreement** | Draft a simple 1-page volunteer contributor agreement covering IP assignment, scope, and Foundation IP | Agreement template committed | `docs/volunteer-agreement` |
@@ -174,7 +174,7 @@ Complete all items before submitting any grant application. Review with Carlos G
 | Fix VP surname in Foundation website (index.html): VanKuijk → VanKaujk | Carlos Garcia | ✅ Done (luminis-foundation/luminis-foundation.github.io#4 merged) |
 | Fix field deployment language in luminis-foundation-open README: remove "✅ Building" overclaim | Carlos Garcia | ✅ Done (luminis-foundation/luminis-foundation-open#6 merged) |
 | Fix 501(c)(3) language in luminis-foundation-open README: "organized under IRC §501(c)(3)" → "applied for recognition" | Carlos Garcia | ✅ Done (luminis-foundation/luminis-foundation-open#6 merged) |
-| Initiate banking (pending / needs board-authorized completion) | Adam Kimble | ⬜ Pending |
+| Banking established | Adam Kimble | ✅ Done — banking established 2026-06-23; account details private |
 | Confirm no EIN committed to any public repo | Carlos Garcia | ⬜ Verify |
 | Confirm no Pay.gov receipt, bank/routing/account details in any public repo | Carlos Garcia | ⬜ Verify |
 | Confirm 501(c)(3) language is "applied for / pending IRS determination" everywhere public | Carlos Garcia | ⬜ Verify |
@@ -184,14 +184,14 @@ Complete all items before submitting any grant application. Review with Carlos G
 
 | Item | Owner | Status |
 |---|---|---|
-| Write calibration protocol (`research/protocols/calibration-protocol.md`) | Carlos Garcia | ⬜ Pending |
-| Write data management plan | Carlos Garcia | ⬜ Pending |
-| Write field data quality SOP | Carlos Garcia | ⬜ Pending |
+| Review calibration protocol framework (`research/protocols/calibration-protocol-framework.md`) | Carlos Garcia | ⬜ Pending Carlos review |
+| Review field data quality SOP framework (`research/protocols/field-data-quality-sop-framework.md`) | Carlos Garcia | ⬜ Pending Carlos review |
+| Write data management plan (from brainstorm at `research/data-management-security-brainstorm.md`) | Carlos Garcia | ⬜ Pending open-question answers |
+| Adopt financial controls policy (`governance/financial-controls-policy.md`) | Board | ⬜ Pending Board review |
 | Draft redacted bylaws summary for public repo | Carlos Garcia | ⬜ Pending |
 | Confirm board minutes are being recorded and stored privately | Guillermo Martin | ⬜ Pending |
-| Draft and adopt financial controls policy | Adam Kimble | ⬜ Pending |
 | Add publication record to `research/publications/` directory | Carlos Garcia | ⬜ Pending |
-| Verify Zenodo preprint author name (VanKaujk vs VanKuijk); request Zenodo correction if needed | Carlos Garcia | ⬜ Pending |
+| Confirm Zenodo author record | Carlos Garcia | ⬜ Pending (P2; concern reviewed; no action expected) |
 
 ### Private-Records Warning
 
@@ -213,9 +213,10 @@ Do not include or attach the following in any materials committed to a public re
 | NM Incorporation | ✅ Complete |
 | 501(c)(3) applied | ✅ Filed Jun 9, 2026 |
 | 501(c)(3) determination received | ❌ Pending IRS |
-| Banking established | ⬜ Pending / needs board-authorized completion |
+| Banking established | ✅ Done — board-authorized institutional bank account opened; account details private |
+| Financial controls policy adopted | ⬜ Pending Board adoption of draft at `governance/financial-controls-policy.md` |
 | Website public-claims accurate | ✅ Done — VP surname corrected via luminis-foundation.github.io#4; README overclaims corrected via luminis-foundation-open#6 |
-| Research protocols documented | ❌ Not yet written |
-| Data management plan | ❌ Not yet written |
+| Research protocols documented | ⬜ Frameworks committed; final protocols funding-dependent |
+| Data management plan | ⬜ Brainstorm committed; final plan pending Carlos decisions |
 | Field data exists | ❌ Simulated only — Step 3 not yet started |
 | Funder-required empirical data | ❌ Step 3 not yet started |

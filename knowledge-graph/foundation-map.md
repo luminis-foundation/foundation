@@ -23,7 +23,7 @@
 | Mailing address | P.O. Box 86, Rowe, NM 87562 | `governance/mission.md` | Public mailing address |
 | Governing law | Chapter 53, Article 8 NMSA 1978 (NM Nonprofit Corporation Act) | `governance/mission.md` | |
 | EIN | Not included in public records | — | Keep private; do not commit |
-| Banking | Pending / needs board-authorized completion | `governance/roadmap.md` (open item) | ⚠️ Gap — 🗣️ Status confirmed as not yet established |
+| Banking | Established — board-authorized institutional bank account opened | Confirmed by founder | 🗣️ Account details retained privately by authorized officers |
 
 ---
 
@@ -41,7 +41,8 @@
 | NM-COROS charitable registration | ⬜ Not yet filed | `governance/roadmap.md` (open) | Carlos Garcia | File after 501(c)(3) determination |
 | Board minutes | ⚠️ Not publicly present in repo | `governance/board-minutes/` empty in this repo | Board Secretary | Private records may exist; document organizational meeting; store privately |
 | Annual reports | ⚠️ Not yet needed | `governance/annual-reports/` empty in repo | Guillermo Martin | Not yet due; required each year to NM SOS |
-| Banking infrastructure | ⚠️ Pending / needs board-authorized completion | Open roadmap item | Adam Kimble | Initiate board-authorized banking process |
+| Banking infrastructure | ✅ Established — board-authorized institutional bank account opened | Confirmed by founder | Adam Kimble | Account details retained privately by authorized officers |
+| Financial controls policy | 📋 Draft created — pending Board adoption | `governance/financial-controls-policy.md` | Adam Kimble + Board | Review draft; adopt by Board resolution; record effective date in minutes |
 | 501(c)(3) determination letter | 📋 Pending IRS | Filed Jun 9, 2026 | IRS / Carlos | Await; do not claim exemption until received |
 
 ---
@@ -52,7 +53,7 @@
 |---|---|---|---|---|
 | Carlos Garcia | President, Founder, Research Director | carlos@luminisfoundationresearch.org | ✅ Active | Primary technical and research lead; single point of failure risk |
 | Guillermo Martin | Secretary | — | ✅ Active | Board minutes and filing responsibilities |
-| Adam Kimble | Treasurer | adam@luminisfoundationresearch.org | ✅ Active | Financial oversight; banking pending / needs board-authorized completion |
+| Adam Kimble | Treasurer | adam@luminisfoundationresearch.org | ✅ Active | Financial oversight; banking established — account details retained privately by authorized officers |
 | Sterling VanKaujk | Vice President | sterling@luminisfoundationresearch.org | ✅ Active | 🗣️ Legal name confirmed by founder as "VanKaujk". ✅ Website surname corrected via luminis-foundation/luminis-foundation.github.io#4 |
 
 **Board gap notes:**
@@ -157,7 +158,7 @@
 **Funding gaps:**
 - No operational budget documented
 - No financial reserves
-- Banking pending / needs board-authorized completion
+- Financial controls policy pending Board adoption
 - No major grant strategy documented
 - No earned revenue model
 - No donor acknowledgment process documented
@@ -170,7 +171,7 @@
 |---|---|---|---|---|---|
 | Bridging Mycelium-Inspired Decentralized Computing and Symbiotic Plant–Fungal–AI Bio-Hybrid Systems in Northern New Mexico's High-Desert Ecosystems | Garcia, Kimble, Martin, VanKaujk | 2026 | [10.5281/zenodo.20143391](https://doi.org/10.5281/zenodo.20143391) | CC-BY-4.0 | Preprint (Zenodo) |
 
-> **⚠️ Author name note:** Correct legal name is "VanKaujk" (founder-confirmed). If the Zenodo submission listed "VanKuijk," a Zenodo metadata correction request should be submitted. Do not assume the preprint is correct until the Zenodo record is verified.
+> **Zenodo author note (reviewed 2026-06-23):** Current known author record is Carlos Garcia, President / Founder / Research Director. No VanKuijk/VanKaujk correction is needed unless Zenodo metadata contains that discrepancy.
 
 **Publication gaps:**
 - No follow-on empirical publications
@@ -211,8 +212,7 @@
 | Question | Category | Owner | Priority |
 |---|---|---|---|
 | Has an EIN been assigned by the IRS? | Legal/compliance | Carlos Garcia | P0 |
-| What specifically is blocking banking establishment, and who has board authorization to initiate it? | Finance | Adam Kimble | P0 |
-| Does the Zenodo preprint list "VanKuijk" or "VanKaujk" as the author? | Records | Carlos Garcia | P1 |
+| Confirm Zenodo author record contains no discrepancy; current known author is Carlos Garcia | Records | Carlos Garcia | P2 |
 | When is the NM-COROS charitable registration required? | Legal/compliance | Carlos Garcia | P1 |
 | Are there bench-test data logs from ESP32/Pi that should be preserved? | Research/data | Carlos Garcia | P1 |
 | What is the specific electrode array model and part number? | Hardware | Carlos Garcia | P1 |
@@ -231,10 +231,10 @@
 | Conflict-of-interest policy | IRS and grant compliance | Commit a public version |
 | Board meeting minutes | Governance continuity | Store privately; keep a log |
 | Organizational meeting minutes | Confirms bylaws adoption, officer elections | Store privately |
-| Financial controls policy | Required for grant accountability | Draft and adopt |
+| Financial controls policy (formal adoption) | Required for grant accountability | Review draft at `governance/financial-controls-policy.md`; adopt by Board resolution |
 | Field protocol documents | Research credibility; needed before deployment | Draft in `research/protocols/` |
-| Calibration protocol | Data quality for any future dataset | Draft before Step 3 |
-| Data management plan | Required by many funders | Draft before first grant |
+| Calibration protocol | Data quality for any future dataset | Framework exists; final protocol pending funding |
+| Data management plan | Required by many funders | Brainstorm exists; final plan pending Carlos decisions |
 | Site agreements/permits | Required before field deployment | Confirm land access |
 | Research ethics review | May be required for ecological sensing | Determine if IRB/IEC needed |
 
@@ -258,12 +258,14 @@
 
 | Decision | Deadline | Owner | Stakes |
 |---|---|---|---|
-| Initiate banking (pending / needs board-authorized completion) | ASAP — blocks financial operations | Adam Kimble | Cannot receive grants, manage expenses, or pay fees |
+| ✅ Banking established | Resolved | Adam Kimble | Board-authorized institutional bank account opened; account details retained privately |
+| Review and adopt financial controls policy | P1 | Adam Kimble + Board | Draft at `governance/financial-controls-policy.md`; required for IRS compliance and grant accountability |
 | ✅ Fix VP surname in website source: luminis-foundation.github.io/index.html | Resolved | Carlos Garcia | Corrected via luminis-foundation/luminis-foundation.github.io#4 |
-| Verify Zenodo preprint VP author name; request Zenodo correction if listed as "VanKuijk" | P1 | Carlos Garcia | Author record accuracy; must align with confirmed legal name |
+| Zenodo author concern reviewed — current known author is Carlos Garcia | P2 | Carlos Garcia | Monitor if discrepancy is found; no correction currently needed |
 | Determine NM-COROS registration requirement | After 501(c)(3) determination | Carlos Garcia | Legal compliance for NM charitable solicitation |
 | ✅ Revise luminis-foundation-open README: field deployment and 501(c)(3) language | Resolved | Carlos Garcia | Corrected via luminis-foundation/luminis-foundation-open#6 |
 | Set Step 3 deployment date | P1 | Carlos Garcia | Unlocks research program, grant eligibility |
+| Review calibration protocol framework; confirm equipment list | P1 | Carlos Garcia | Framework at `research/protocols/calibration-protocol-framework.md`; final protocol deferred to post-funding |
 | Draft and adopt financial controls policy | P1 | Adam Kimble | Required for IRS compliance and grant accountability |
 | Draft field and calibration protocols | Before Step 3 | Carlos Garcia | Research credibility; data quality |
 | Decide board expansion strategy | P2 | Board | Governance resilience; diverse expertise |
@@ -295,7 +297,8 @@
 | VP legal name is "VanKaujk" | ✅ Pub + 🗣️ Founder | Confirmed by founder; website corrected via luminis-foundation/luminis-foundation.github.io#4 |
 | Website VP surname corrected to "VanKaujk" | ✅ Pub | luminis-foundation/luminis-foundation.github.io#4 merged |
 | luminis-foundation-open README overclaims corrected | ✅ Pub | luminis-foundation/luminis-foundation-open#6 merged |
-| Banking not yet established | 🗣️ Founder | Open item in `governance/roadmap.md`; confirmed as pending |
+| Banking established | 🗣️ Founder | Confirmed by founder 2026-06-23; account details retained privately |
+| Zenodo author concern reviewed | 🗣️ Founder | Current known author: Carlos Garcia; no VanKuijk/VanKaujk correction needed unless Zenodo metadata shows discrepancy |
 | EIN assigned or not | ❓ Unknown | Not in public records; keep private |
 | ESP32 + Pi bench-validated end-to-end | ✅ Pub | `mycosense/FIELD_STATUS.md` |
 | Step 3 on-site deployment is planned, not started | ✅ Pub | `mycosense/FIELD_STATUS.md` |
@@ -303,4 +306,3 @@
 | Preprint published — DOI 10.5281/zenodo.20143391 | ✅ Pub | `governance/milestones.md` |
 | Awesome Foundation grant pending ($1,000) | ✅ Pub | `governance/grants.md` |
 | Bylaws / COI text / board minutes exist | ❓ Unknown (public) / 📋 Legal (private) | Not publicly present in repo; existence inferred from milestones |
-| Zenodo preprint author spelling | ⚠️ Unverified | Needs manual check; correction request may be needed |

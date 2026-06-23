@@ -10,16 +10,16 @@
 ## Top 10 Risks to Address First
 
 | Rank | Risk | Likelihood | Impact | Category |
-|---|---|---|
+|---|---|---|---|---|
 | 1 | **Founder single point of failure** | High | Critical | Governance / Operations |
 | 2 | **501(c)(3) application denial or delay** | Medium | High | Legal / Compliance |
-| 3 | **Banking pending / needs board-authorized completion** | High | High | Finance / Operations |
-| 4 | **Scientific overclaiming** | Medium | High | Public Communications / Legal |
+| 3 | **Financial controls policy pending Board adoption** | Medium | High | Finance / Operations |
+| 4 | **Scientific overclaiming** | Low | High | Public Communications / Legal |
 | 5 | **No field calibration or data quality protocol** | High | High | Research / Data |
 | 6 | **Pi server exposed to internet accidentally** | Low | Critical | Security |
 | 7 | **VITE_PI_TOKEN embedded in public Vercel bundle** | Medium | High | Security |
 | 8 | **Governance documentation gaps** | High | Medium | Governance |
-| 9 | **No financial controls policy** | High | Medium | Finance / Compliance |
+| 9 | **No financial controls policy adopted** | Medium | Medium | Finance / Compliance |
 | 10 | **AI agent commits sensitive data or overclaims status** | Medium | High | AI Workflow / Compliance |
 
 ---
@@ -27,17 +27,17 @@
 ## 1. Legal / Compliance Risk
 
 **Description:**
-The Foundation is a new legal entity (formed March 16, 2026) with several compliance obligations not yet completed: NM-COROS charitable registration, banking (pending / needs board-authorized completion), annual reporting to NM SOS, and future IRS 990 filings. The 501(c)(3) application (Form 1023-EZ) is pending. Any grant or donation received before banking is established cannot be processed.
+The Foundation is a new legal entity (formed March 16, 2026) with several compliance obligations not yet completed: NM-COROS charitable registration, financial controls policy adoption (draft at `governance/financial-controls-policy.md`; pending Board review), annual reporting to NM SOS, and future IRS 990 filings. The 501(c)(3) application (Form 1023-EZ) is pending. Banking has been established.
 
 | Attribute | Value |
 |---|---|
 | Likelihood | High (multiple open items) |
 | Impact | High (compliance failure, funder rejection, IRS jeopardy) |
-| Current controls | Form 1023-EZ filed; NM SOS Initial Report filed; NM Entity in good standing |
-| Missing controls | Banking; NM-COROS registration; financial controls policy; board minutes |
-| Mitigation | Initiate board-authorized banking process immediately; file NM-COROS after IRS determination; document all compliance deadlines |
+| Current controls | Form 1023-EZ filed; NM SOS Initial Report filed; NM Entity in good standing; banking established |
+| Missing controls | Financial controls policy (draft at `governance/financial-controls-policy.md`, pending Board adoption); NM-COROS registration; board minutes |
+| Mitigation | Adopt financial controls policy; file NM-COROS after IRS determination; document all compliance deadlines |
 | Owner | Carlos Garcia, Adam Kimble |
-| Next action | Initiate bank account (pending / needs board-authorized completion); create compliance calendar with all annual deadlines |
+| Next action | ✅ Banking established; adopt financial controls policy (see `governance/financial-controls-policy.md`); create compliance calendar with all annual deadlines |
 
 ---
 
@@ -105,7 +105,7 @@ Carlos Garcia is simultaneously President, Founder, Research Director, primary t
 | Missing controls | Technical documentation sufficient for handoff; research protocol documentation; key contacts list; credential escrow |
 | Mitigation | Document all passwords and credentials in a secure escrow (not a public repo); create a Foundation operations manual; ensure at least one other board member has access to all accounts |
 | Owner | Carlos Garcia + Board |
-| Next action | Create a private "Foundation Operations & Credentials" document accessible to Board; ensure Adam Kimble has access to banking once established |
+| Next action | Create a private "Foundation Operations & Credentials" document accessible to Board; ensure Adam Kimble has access to banking |
 
 ---
 
@@ -119,17 +119,17 @@ Identified public document risks; two primary overclaims addressed via follow-up
 Remaining risks:
 - The Vercel demo could be mistaken for real sensor data if disclaimers are missed.
 - The preprint on Zenodo is a synthesis/theoretical paper, not an empirical field study — this distinction matters to scientific funders.
-- Zenodo preprint author name (VanKaujk vs VanKuijk) needs verification; correction request may be needed.
+- Zenodo preprint author name: concern reviewed 2026-06-23; current known author is Carlos Garcia; monitor if discrepancy is found.
 
 | Attribute | Value |
 |---|---|
-| Likelihood | Low (primary overclaims corrected in follow-up PRs; ongoing risk from future edits and unverified Zenodo record) |
+| Likelihood | Low (primary overclaims corrected; Zenodo concern reviewed) |
 | Impact | High (IRS scrutiny, funder loss of trust, reputational damage, potential misrepresentation) |
 | Current controls | Website uses accurate 501(c)(3) language; MycoSense README correctly labels demo as simulated; FIELD_STATUS.md is accurate; luminis-foundation-open README corrected via PR #6 |
-| Missing controls | Consistent language across all public repos; no single source of truth for approved status claims; Zenodo preprint author name unverified |
+| Missing controls | Consistent language across all public repos; no single source of truth for approved status claims |
 | Mitigation | Primary overclaims corrected via follow-up PRs; use knowledge-graph/foundation-map.md as the approved status reference for all future claims; audit remaining repos for status claims before next grant submission |
 | Owner | Carlos Garcia |
-| Next action | (✅ Done) Website VP surname corrected via luminis-foundation/luminis-foundation.github.io#4; (✅ Done) luminis-foundation-open README corrected via luminis-foundation/luminis-foundation-open#6; (P1) Verify Zenodo preprint author name; audit remaining repos |
+| Next action | (✅ Done) Website VP surname corrected; (✅ Done) luminis-foundation-open README corrected; (P2) confirm Zenodo author record; audit remaining repos before next grant submission |
 
 ---
 
@@ -157,13 +157,13 @@ No real field data exists yet. When it does, data quality risks include: uncalib
 
 | Attribute | Value |
 |---|---|
-| Likelihood | High (no protocol yet defined) |
+| Likelihood | High (no final protocol yet defined) |
 | Impact | High (unpublishable data; wasted field effort; grant deliverable failure) |
-| Current controls | CalibrationPanel.jsx exists in dashboard; provenanceHash.js implemented for provenance anchoring |
-| Missing controls | Written calibration protocol; field data quality SOP; metadata schema; acceptance criteria; QC review process |
-| Mitigation | Draft calibration protocol and data quality SOP before Step 3; define minimum metadata requirements; define acceptance criteria for a valid reading |
+| Current controls | CalibrationPanel.jsx exists in dashboard; provenanceHash.js implemented for provenance anchoring; calibration framework and data quality SOP framework committed |
+| Missing controls | Final calibration thresholds (funding-dependent); final field data quality thresholds (funding-dependent); metadata schema; QC review process |
+| Mitigation | Review calibration framework and SOP framework before Step 3; define minimum metadata requirements; final thresholds derived from pilot data after funding |
 | Owner | Carlos Garcia |
-| Next action | Draft `research/protocols/calibration-protocol.md` and `research/protocols/field-data-quality-sop.md` |
+| Next action | Carlos reviews `research/protocols/calibration-protocol-framework.md` and `research/protocols/field-data-quality-sop-framework.md`; confirm equipment list and metadata requirements |
 
 ---
 
@@ -192,34 +192,34 @@ Known technical security limitations documented in SECURITY.md and FIELD_DEPLOYM
 ## 10. Funding Risk
 
 **Description:**
-The Foundation has one pending grant ($1,000 microgrant) and no other funding pipeline, no banking, no earned revenue, and no documented operating budget. Without 501(c)(3) determination, most institutional grants are inaccessible. Without banking, even approved grants cannot be received.
+The Foundation has one pending grant ($1,000 microgrant) and no other funding pipeline, no earned revenue, and no documented operating budget. Banking has been established. Without 501(c)(3) determination, most institutional grants are inaccessible.
 
 | Attribute | Value |
 |---|---|
-| Likelihood | High (single grant, no banking, no pipeline) |
+| Likelihood | High (single grant, no pipeline) |
 | Impact | High (operations stall; research halted; personnel can't be compensated) |
-| Current controls | Operations currently run on founder's time; low overhead |
-| Missing controls | Operating budget; banking; grant strategy; donor cultivation; 501(c)(3) determination |
-| Mitigation | Initiate banking immediately (pending / needs board-authorized completion); await 501(c)(3) determination; develop a 12-month grant pipeline targeting environmental/tech foundations; document operating expenses |
+| Current controls | Operations currently run on founder's time; low overhead; banking established |
+| Missing controls | Operating budget; financial controls policy adoption; grant strategy; donor cultivation; 501(c)(3) determination |
+| Mitigation | Banking established; adopt financial controls policy; await 501(c)(3) determination; develop a 12-month grant pipeline targeting environmental/tech foundations; document operating expenses |
 | Owner | Adam Kimble, Carlos Garcia |
-| Next action | Initiate bank account; draft 12-month operating budget; identify 5 grant opportunities for next cycle |
+| Next action | Adopt financial controls policy; draft 12-month operating budget; identify 5 grant opportunities for next cycle |
 
 ---
 
 ## 11. Public Communications Risk
 
 **Description:**
-Inconsistent or inaccurate public statements about the Foundation's status — 501(c)(3) approval, field deployment completeness, data validity, or research maturity — carry reputational and legal risk. Public statements appear across a website, 4 GitHub repos, a published preprint, and AI-generated content. Two confirmed errors have been corrected via follow-up PRs: website VP surname (luminis-foundation/luminis-foundation.github.io#4) and luminis-foundation-open README overclaims (luminis-foundation/luminis-foundation-open#6). Remaining risk: Zenodo preprint author name (VanKaujk vs VanKuijk) needs verification.
+Inconsistent or inaccurate public statements about the Foundation's status — 501(c)(3) approval, field deployment completeness, data validity, or research maturity — carry reputational and legal risk. Public statements appear across a website, 4 GitHub repos, a published preprint, and AI-generated content. Two confirmed errors have been corrected via follow-up PRs: website VP surname (luminis-foundation/luminis-foundation.github.io#4) and luminis-foundation-open README overclaims (luminis-foundation/luminis-foundation-open#6). Remaining risk: Zenodo preprint author record reviewed; no correction currently needed.
 
 | Attribute | Value |
 |---|---|
-| Likelihood | Low–Medium (primary inconsistencies corrected; ongoing risk from future edits and unverified Zenodo record) |
+| Likelihood | Low–Medium (primary inconsistencies corrected; ongoing risk from future edits) |
 | Impact | High (IRS scrutiny; funder distrust; reputational damage) |
 | Current controls | Website and MycoSense README use accurate language; FIELD_STATUS.md is authoritative; luminis-foundation-open README corrected via PR #6 |
-| Missing controls | Consistent language policy across all repos; single approved status statement; Zenodo preprint author name unverified |
+| Missing controls | Consistent language policy across all repos; single approved status statement |
 | Mitigation | VP surname and README overclaims corrected via follow-up PRs; adopt a "Public Status Language Standard"; audit all repos before each grant submission |
 | Owner | Carlos Garcia |
-| Next action | Verify Zenodo preprint author name; create a status language reference doc; enable quarterly repo audits before grant submissions |
+| Next action | Confirm Zenodo author record (P2); create a status language reference doc; enable quarterly repo audits before grant submissions |
 
 ---
 
@@ -317,12 +317,12 @@ The planned Step 3 deployment is at the Foundation's office site in Rowe, NM —
 | 3 | Governance | High | Medium | P1 |
 | 4 | Board Continuity | Medium | High | P1 |
 | 5 | Founder Dependency | Medium | Critical | P0 |
-| 6 | Scientific Overclaiming | Medium | High | P0 |
+| 6 | Scientific Overclaiming | Low | High | P1 |
 | 7 | Hardware Deployment | High | Medium | P1 |
 | 8 | Data Quality | High | High | P1 |
 | 9 | Security / Privacy | Low–Med | High | P1 |
 | 10 | Funding | High | High | P0 |
-| 11 | Public Communications | Medium | High | P1 |
+| 11 | Public Communications | Low–Med | High | P1 |
 | 12 | Partnership | Low–Med | Medium | P2 |
 | 13 | Volunteer / Contractor | Medium | Medium | P2 |
 | 14 | AI Agent Workflow | Medium | High | P1 |
@@ -349,12 +349,12 @@ The planned Step 3 deployment is at the Foundation's office site in Rowe, NM —
 |---|---|---|
 | NM incorporation complete; entity in good standing | ✅ Pub | `governance/mission.md`, `governance/milestones.md` |
 | 501(c)(3) applied for; determination pending | ✅ Pub | `governance/milestones.md`; website |
-| Banking not yet established | 🗣️ Founder | Open item in `governance/roadmap.md`; confirmed pending |
+| Banking established | 🗣️ Founder | Confirmed by founder 2026-06-23; account details private |
 | VP legal name is "VanKaujk" | ✅ Pub + 🗣️ Founder | Confirmed by founder; website corrected via luminis-foundation/luminis-foundation.github.io#4 |
 | Website VP surname corrected to "VanKaujk" | ✅ Pub | luminis-foundation/luminis-foundation.github.io#4 merged |
 | luminis-foundation-open README overclaims corrected | ✅ Pub | luminis-foundation/luminis-foundation-open#6 merged |
+| Zenodo author concern reviewed | 🗣️ Founder | Current known author: Carlos Garcia; no correction needed unless Zenodo metadata shows discrepancy |
 | VITE_PI_TOKEN risk (not currently set in Vercel) | ❓ Unknown | Risk is documented in SECURITY.md; current Vercel env var state unconfirmed |
 | No validated public field dataset | ✅ Pub | `research/datasets/` empty; `mycosense/FIELD_STATUS.md` |
 | No board minutes in public repo | ✅ Pub | `governance/board-minutes/` empty in this repo |
-| No financial controls policy documented | ✅ Pub | No such document found in any public repo |
-| Zenodo preprint author spelling | ⚠️ Unverified | Needs manual check; correction request may be needed |
+| No financial controls policy adopted | ✅ Pub | Draft at `governance/financial-controls-policy.md`; not yet Board-adopted |

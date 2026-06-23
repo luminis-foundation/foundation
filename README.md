@@ -50,6 +50,10 @@ foundation/
 | `governance/grants.md` | Grant applications and awards |
 | `governance/mission.md` | Legal mission statement and entity details |
 | `governance/roadmap.md` | Forward-looking strategic priorities (Board draft) |
+| `governance/financial-controls-policy.md` | Financial controls policy draft (pending Board adoption) |
+| `research/protocols/calibration-protocol-framework.md` | Calibration planning framework (funding-dependent) |
+| `research/protocols/field-data-quality-sop-framework.md` | Field data quality planning framework (funding-dependent) |
+| `research/data-management-security-brainstorm.md` | Data management and security design brainstorm |
 
 ## Foundation Status at a Glance
 
@@ -62,7 +66,8 @@ foundation/
 | MycoSense Hardware | Bench-tested — ESP32 + Pi end-to-end validated on bench |
 | On-Site Prototype Deployment | Planned — Foundation office site, Rowe, NM |
 | Grants | 1 pending — Awesome Foundation Conservation & Climate, $1,000 |
-| Banking | Pending / needs board-authorized completion |
+| Banking | Banking established — board-authorized institutional bank account opened. Account details are retained privately by authorized officers. |
+| Financial Controls Policy | Draft created — pending Board review and formal adoption |
 | Field Dataset | None — planned after Step 3 on-site prototype validation |
 
 ## Public Websites
