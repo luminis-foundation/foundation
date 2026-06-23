@@ -144,7 +144,7 @@ Minimum required metadata for each deployment session:
 {
   "session_id": "uuid",
   "site_name": "string",
-  "site_gps": { "lat": float, "lon": float, "elevation_m": float },
+  "site_gps": { "lat": "float", "lon": "float", "elevation_m": "float" },
   "deployment_start": "ISO8601",
   "deployment_end": "ISO8601",
   "personnel": ["string"],
@@ -282,3 +282,32 @@ Before publishing a dataset or empirical paper:
 | 3 | Controlled on-site prototype (Rowe, NM) | 📋 Planned | Protocols + hardware prep + site access + deployment date |
 | 4 | Validated local field dataset | ⬜ Future | Step 3 complete + calibration + QC + extended run |
 | 5 | Pecos watershed deployment + public dataset | ⬜ Future | Step 4 complete + land access + community engagement |
+
+---
+
+## Evidence Confidence
+
+### Key
+
+| Symbol | Meaning |
+|---|---|
+| ✅ Pub | Confirmed from public repository files |
+| 📋 Legal | Confirmed from legal/state records (private) |
+| 🗣️ Founder | Stated or confirmed by the founder |
+| ⚠️ Conflict | Conflicted — multiple sources disagree |
+| ❓ Unknown | Missing or not verifiable from available public sources |
+
+### Assessment
+
+| Claim | Confidence | Source |
+|---|---|---|
+| MycoSense Vercel dashboard is live with simulated data | ✅ Pub | `mycosense/FIELD_STATUS.md`; mycosense.vercel.app |
+| ESP32 + Pi bench-validated end-to-end | ✅ Pub | `mycosense/FIELD_STATUS.md` |
+| Step 3 on-site deployment planned, not started | ✅ Pub | `mycosense/FIELD_STATUS.md` |
+| No validated public field dataset exists | ✅ Pub | `research/datasets/` empty; FIELD_STATUS.md confirms |
+| No calibration protocol written | ✅ Pub | `research/protocols/` directory is empty |
+| No data quality SOP written | ✅ Pub | `research/protocols/` directory is empty |
+| No real bench-test data in public repo | ✅ Pub | Not found in any public repo; may exist locally |
+| Bench-test data may exist locally but not published | ❓ Unknown | No confirmation either way |
+| Preprint is theoretical/synthesis — not empirical field data | ✅ Pub | DOI 10.5281/zenodo.20143391; preprint content |
+| Land access for Rowe, NM site confirmed | ❓ Unknown | Not documented in any public repo |

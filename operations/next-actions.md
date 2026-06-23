@@ -10,7 +10,7 @@
 
 | Priority | Action | Owner | Effort | Reason | Acceptance Criteria |
 |---|---|---|---|---|---|
-| P0 | Establish banking | Adam Kimble | Medium | Blocks receiving grants, paying expenses, and financial accountability | Bank account open; signatories established; Adam and Carlos have access |
+| P0 | Initiate banking (pending / needs board-authorized completion) | Adam Kimble | Medium | Blocks receiving grants, paying expenses, and financial accountability | Bank account open; signatories established; Adam and Carlos have access |
 | P0 | Await and log IRS correspondence | Carlos Garcia | Small | 1023-EZ filed Jun 9 — monitor for IRS questions or determination letter | IRS determination letter received and filed privately; status updated in foundation-map.md |
 | P1 | Confirm NM-COROS registration requirement | Carlos Garcia | Small | Required if Foundation solicits charitable contributions in NM | Decision documented; registration filed if required |
 | P1 | Create compliance calendar | Carlos Garcia, Adam Kimble | Small | Annual NM SOS report, IRS 990/990-N, NM-COROS renewals — all have deadlines | Calendar created with all annual deadlines for 2026–2028 |
@@ -25,10 +25,11 @@
 
 | Priority | Action | Owner | Effort | Reason | Acceptance Criteria |
 |---|---|---|---|---|---|
-| P0 | Document organizational meeting minutes | Guillermo Martin | Small | Confirms bylaws adoption, officer elections — foundational governance record | Minutes drafted and stored privately (not in public repo) |
+| P0 | Confirm signed organizational meeting minutes are retained as a private record; create a public-safe index or template if desired | Guillermo Martin | Small | Confirms bylaws adoption, officer elections — foundational governance record | Signed copy confirmed retained privately; public-safe index or template created if desired |
+| ✅ Done | Fix VP surname in Foundation website source: luminis-foundation.github.io/index.html | Carlos Garcia | Small | Corrected via luminis-foundation/luminis-foundation.github.io#4 | ✅ PR merged; website displays "VanKaujk" |
+| P1 | Verify Zenodo preprint VP author name spelling; request Zenodo correction if listed as "VanKuijk" | Carlos Garcia | Small | Author record must align with confirmed legal name | Zenodo record checked; correction request submitted if needed |
 | P1 | Schedule Q3 2026 board meeting | Carlos Garcia | Small | Governance cadence; review foundation status, research plan, budget | Board meeting held; minutes recorded |
-| P1 | Resolve VanKuijk/VanKaujk spelling across all repos | Guillermo Martin | Small | Inconsistency between website (VanKuijk) and milestones/open repo (VanKaujk) — legal name matters | Correct spelling confirmed with Sterling; all public docs updated |
-| P1 | Ensure all officers have access to key accounts | Carlos Garcia | Small | Founder dependency risk — single point of failure | Adam has banking access; Guillermo has NM SOS access; at least 2 people can access GitHub org |
+| P1 | Ensure all officers have access to key accounts | Carlos Garcia | Small | Founder dependency risk — single point of failure | Adam has banking access once established; Guillermo has NM SOS access; at least 2 people can access GitHub org |
 | P2 | Evaluate board expansion | Board | Medium | 4-person board is small; independent director(s) would strengthen governance | Board discusses expansion; target 5–7 members within 12 months |
 | P2 | Create private "operations and credentials" document | Carlos Garcia | Medium | Founder dependency; all key accounts, contacts, and credentials should be accessible to board in emergency | Document created; stored securely offline or in private repo accessible to Board |
 | P3 | Draft board member agreement/expectations | Carlos Garcia | Small | Volunteer expectations; time commitment; fiduciary duty | Board member agreement drafted and signed |
@@ -85,8 +86,9 @@
 
 | Priority | Action | Owner | Effort | Reason | Acceptance Criteria |
 |---|---|---|---|---|---|
-| P1 | Fix overclaiming language in `luminis-foundation-open` README | Carlos Garcia | Small | "Field deployment ✅ Building" overstates actual status; IRS and funder risk | README updated to accurate language; PR merged |
-| P1 | Fix 501(c)(3) language in `luminis-foundation-open` README | Carlos Garcia | Small | "organized under IRC §501(c)(3)" could be read as confirmed status | Language updated to "applied for recognition under IRC §501(c)(3)" |
+| ✅ Done | Fix VP surname in Foundation website source (index.html: VanKuijk → VanKaujk) | Carlos Garcia | Small | Corrected via luminis-foundation/luminis-foundation.github.io#4 | ✅ PR merged; website displays "Sterling VanKaujk" |
+| ✅ Done | Fix overclaiming language in `luminis-foundation-open` README | Carlos Garcia | Small | Corrected via luminis-foundation/luminis-foundation-open#6 | ✅ PR merged; deployment table updated: simulated dashboard / bench-tested hardware / Rowe on-site prototype planned / Pecos future |
+| ✅ Done | Fix 501(c)(3) language in `luminis-foundation-open` README | Carlos Garcia | Small | Corrected via luminis-foundation/luminis-foundation-open#6 | ✅ PR merged; language updated to "applied for recognition under IRC §501(c)(3); determination pending" |
 | P2 | Add privacy policy to Foundation website | Carlos Garcia | Small | Best practice; required if any data is collected through the site | Privacy policy page added |
 | P2 | Add "Open Research" section linking luminis-foundation-open | Carlos Garcia | Small | Website does not prominently link the open research repo | Section added to index.html |
 | P3 | Add Foundation blog or research updates section | Carlos Garcia | Medium | Communicates research progress to funders and community | At least one update published post-Step 3 |
@@ -147,10 +149,10 @@ Ranked by institutional value. Each is scoped, executable, and produces a commit
 | Rank | Task | Description | Output | Branch |
 |---|---|---|---|---|
 | 1 | **Write calibration protocol** | Draft `research/protocols/calibration-protocol.md` based on ADS1115/ADS1299 electrode systems; include reference signal, deviation threshold, temperature compensation notes | Protocol document ready for Carlos review | `docs/calibration-protocol` |
-| 2 | **Write field data quality SOP** | Draft `research/protocols/field-data-quality-sop.md` based on metadata schema and quality requirements in this roadmap | SOP ready for Step 3 | `docs/field-data-quality-sop` |
+| 2 | **Write field data quality SOP** | Draft `research/protocols/field-data-quality-sop.md` based on metadata schema and quality requirements in the research roadmap audit | SOP ready for Step 3 | `docs/field-data-quality-sop` |
 | 3 | **Add publication record** | Create `research/publications/2026-zenodo-20143391.md` with full citation, abstract summary, CC-BY license note, and relationship to MycoSense | Publication record committed | `docs/publication-records` |
 | 4 | **Draft data management plan** | Create `research/data-management-plan.md` covering: data types, storage, retention, sharing, privacy, Zenodo upload procedure, versioning | DMP ready for grant submissions | `docs/data-management-plan` |
-| 5 | **Fix overclaiming in open repo** | Update `luminis-foundation-open` README: field deployment language, 501(c)(3) language, VanKuijk/VanKaujk fix | PR to luminis-foundation-open | `fix/readme-status-language` |
+| 5 | ✅ **Fix P0 website + open-repo public-claims errors** | (a) luminis-foundation/luminis-foundation.github.io#4: VP surname VanKuijk → VanKaujk — merged. (b) luminis-foundation/luminis-foundation-open#6: README field deployment and 501(c)(3) language corrected — merged | ✅ Both PRs merged | `fix/vp-surname-vankaujk`, `fix/readme-public-claims` |
 | 6 | **Draft board meeting agenda template** | Create a reusable board meeting agenda template in `governance/board-minutes/` covering standard NM nonprofit agenda items | Template committed | `docs/board-meeting-template` |
 | 7 | **Write volunteer contribution agreement** | Draft a simple 1-page volunteer contributor agreement covering IP assignment, scope, and Foundation IP | Agreement template committed | `docs/volunteer-agreement` |
 | 8 | **Draft hardware specification document** | Create `research/protocols/hardware-spec.md` documenting ESP32-C6/S3 model, ADC board, electrode type, Pi model, power system — all with part numbers | Hardware spec committed | `docs/hardware-spec` |
@@ -158,3 +160,62 @@ Ranked by institutional value. Each is scoped, executable, and produces a commit
 | 10 | **Audit security-hardening repo** | Inspect `luminis-foundation/security-hardening` contents; identify gaps vs. current system; produce a gap analysis document | Gap analysis committed to this repo | `audit/security-hardening-gap` |
 | 11 | **Draft annual report template** | Create `governance/annual-reports/annual-report-template.md` based on NM SOS requirements and common funder expectations | Template committed | `docs/annual-report-template` |
 | 12 | **Write grant pipeline document** | Research and draft `governance/grants-pipeline.md` with 5–10 grant opportunities: funder, program, amount, deadline, eligibility, alignment | Grant pipeline committed | `docs/grant-pipeline` |
+
+---
+
+## Before Next Grant Application — Pre-Submission Checklist
+
+Complete all items before submitting any grant application. Review with Carlos Garcia and audit with Claude or Lumen before submission.
+
+### P0 — Must be resolved before any application
+
+| Item | Owner | Status |
+|---|---|---|
+| Fix VP surname in Foundation website (index.html): VanKuijk → VanKaujk | Carlos Garcia | ✅ Done (luminis-foundation/luminis-foundation.github.io#4 merged) |
+| Fix field deployment language in luminis-foundation-open README: remove "✅ Building" overclaim | Carlos Garcia | ✅ Done (luminis-foundation/luminis-foundation-open#6 merged) |
+| Fix 501(c)(3) language in luminis-foundation-open README: "organized under IRC §501(c)(3)" → "applied for recognition" | Carlos Garcia | ✅ Done (luminis-foundation/luminis-foundation-open#6 merged) |
+| Initiate banking (pending / needs board-authorized completion) | Adam Kimble | ⬜ Pending |
+| Confirm no EIN committed to any public repo | Carlos Garcia | ⬜ Verify |
+| Confirm no Pay.gov receipt, bank/routing/account details in any public repo | Carlos Garcia | ⬜ Verify |
+| Confirm 501(c)(3) language is "applied for / pending IRS determination" everywhere public | Carlos Garcia | ⬜ Verify |
+| Confirm MycoSense demo is labeled "simulated/mock data" in all public materials | Carlos Garcia | ✅ Done (website + README accurate) |
+
+### P1 — Should be resolved before a significant grant application
+
+| Item | Owner | Status |
+|---|---|---|
+| Write calibration protocol (`research/protocols/calibration-protocol.md`) | Carlos Garcia | ⬜ Pending |
+| Write data management plan | Carlos Garcia | ⬜ Pending |
+| Write field data quality SOP | Carlos Garcia | ⬜ Pending |
+| Draft redacted bylaws summary for public repo | Carlos Garcia | ⬜ Pending |
+| Confirm board minutes are being recorded and stored privately | Guillermo Martin | ⬜ Pending |
+| Draft and adopt financial controls policy | Adam Kimble | ⬜ Pending |
+| Add publication record to `research/publications/` directory | Carlos Garcia | ⬜ Pending |
+| Verify Zenodo preprint author name (VanKaujk vs VanKuijk); request Zenodo correction if needed | Carlos Garcia | ⬜ Pending |
+
+### Private-Records Warning
+
+Do not include or attach the following in any materials committed to a public repo, even as part of a grant application package:
+
+- EIN / Federal Employer Identification Number
+- Pay.gov receipt or IRS fee payment confirmation
+- Bank account, routing, or payment details
+- Private legal PDFs (Certificate of Incorporation, signed bylaws, IRS correspondence)
+- Personal home addresses beyond the already-public registered office (133 Frontage Rd 2116, Rowe, NM 87562)
+- API keys, tokens, credentials, or secrets of any kind
+- Unredacted board minutes containing personal signatures
+- Any document not intended for public disclosure
+
+### Grant Readiness Status
+
+| Criterion | Status |
+|---|---|
+| NM Incorporation | ✅ Complete |
+| 501(c)(3) applied | ✅ Filed Jun 9, 2026 |
+| 501(c)(3) determination received | ❌ Pending IRS |
+| Banking established | ⬜ Pending / needs board-authorized completion |
+| Website public-claims accurate | ✅ Done — VP surname corrected via luminis-foundation.github.io#4; README overclaims corrected via luminis-foundation-open#6 |
+| Research protocols documented | ❌ Not yet written |
+| Data management plan | ❌ Not yet written |
+| Field data exists | ❌ Simulated only — Step 3 not yet started |
+| Funder-required empirical data | ❌ Step 3 not yet started |

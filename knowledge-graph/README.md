@@ -47,7 +47,7 @@ Luminis Foundation (NM Nonprofit, Entity ID 0008089293)
   │       ├── Carlos Garcia — President / Founder / Research Director
   │       ├── Guillermo Martin — Secretary
   │       ├── Adam Kimble — Treasurer
-  │       └── Sterling VanKuijk — Vice President
+  │       └── Sterling VanKaujk — Vice President
   │
   ├── holds legal records ────────────────────────────────────────────────
   │   ├── NM Certificate of Incorporation (Mar 16, 2026)
@@ -81,7 +81,7 @@ Luminis Foundation (NM Nonprofit, Entity ID 0008089293)
   │
   ├── holds publications ────────────────────────────────────────────────
   │   └── Zenodo preprint (2026) — DOI: 10.5281/zenodo.20143391
-  │       Authors: Garcia C., Kimble A., Martin G., VanKuijk S.
+  │       Authors: Garcia C., Kimble A., Martin G., VanKaujk S.
   │       License: CC-BY-4.0
   │
   ├── applied for grants ──────────────────────────────────────────────
@@ -92,6 +92,9 @@ Luminis Foundation (NM Nonprofit, Entity ID 0008089293)
       ├── luminisfoundationresearch.org — Foundation website (live)
       └── mycosense.vercel.app — MycoSense demo (live, SIMULATED data)
 ```
+
+> **⚠️ P0 Data Quality Issue — VP Surname:**
+> The Foundation website source (`luminis-foundation.github.io/index.html`) lists the Vice President as "Sterling VanKuijk." The correct legal name, confirmed by the founder, is **"Sterling VanKaujk."** This is an error in the live public website requiring a separate PR to the `luminis-foundation.github.io` repository. All documents in this repo use the confirmed spelling "VanKaujk." The Zenodo preprint author list should also be verified; if it was submitted as "VanKuijk," a Zenodo metadata correction request is needed.
 
 ## Files in This Directory
 
@@ -107,3 +110,4 @@ Luminis Foundation (NM Nonprofit, Entity ID 0008089293)
 3. Review before every grant submission and IRS correspondence
 4. Assign an owner to every open next action
 5. Date every status change
+6. Do not standardize a person's legal name or identifier without explicit founder or legal-record confirmation — flag discrepancies with ⚠️ and note the source of each version

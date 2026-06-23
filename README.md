@@ -62,7 +62,7 @@ foundation/
 | MycoSense Hardware | Bench-tested — ESP32 + Pi end-to-end validated on bench |
 | On-Site Prototype Deployment | Planned — Foundation office site, Rowe, NM |
 | Grants | 1 pending — Awesome Foundation Conservation & Climate, $1,000 |
-| Banking | Not yet established |
+| Banking | Pending / needs board-authorized completion |
 | Field Dataset | None — planned after Step 3 on-site prototype validation |
 
 ## Public Websites

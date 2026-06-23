@@ -64,7 +64,7 @@ This model applies to: repository changes, institutional documents, public commu
 
 ---
 
-### Claude (Fable 5 / claude-sonnet-4-6) — Repository Execution Agent
+### Claude — Repository Execution Agent
 
 **Scope:** Deep document and code execution on branches — never directly to main.
 
@@ -88,11 +88,12 @@ This model applies to: repository changes, institutional documents, public commu
 1. Never commit directly to main — always to a feature branch, always via PR
 2. Before every commit: check for secrets, EIN, bank details, private legal PDFs
 3. Use conservative language: "planned", "pending", "applied for", "bench-tested"
-4. If uncertain about a fact, flag it explicitly — do not assume
+4. If uncertain about a fact, flag it explicitly with ⚠️ — do not assume or fill gaps
 5. Never claim 501(c)(3) determination has been granted unless an IRS letter is present
 6. Never claim field deployment has occurred unless FIELD_STATUS.md confirms it
-7. Never claim validated public dataset exists until one is on Zenodo
-8. Commit messages must describe what changed, not what is planned
+7. Never claim a validated public dataset exists until one is on Zenodo
+8. Never standardize a person's legal name or identifier in public documents without explicit founder or legal-record confirmation — flag discrepancies with ⚠️, note the source of each version, and defer to the founder's stated legal name
+9. Commit messages must describe what changed, not what is planned
 
 ---
 
@@ -179,6 +180,8 @@ This model applies to: repository changes, institutional documents, public commu
 | Research claims | Cite the preprint; do not claim empirical validation without Step 4+ data |
 | Hardware | "Bench-validated" or "Step 2 complete" |
 | MycoSense demo | "Simulated data / mock mode" |
+| Banking status | "Pending / needs board-authorized completion" |
+| Personnel names | Use founder-confirmed spelling; flag any discrepancy with ⚠️ rather than silently choosing one version |
 
 ### AI Agent Safety Rules
 
@@ -188,6 +191,7 @@ This model applies to: repository changes, institutional documents, public commu
 4. AI agents must not access, request, or store credentials, banking information, or EIN
 5. AI agents should explicitly note when they cannot verify a claim from available sources
 6. When in doubt about a status claim, use the most conservative accurate language
+7. AI agents must not standardize legal names without founder or legal-record confirmation
 
 ---
 
@@ -207,3 +211,27 @@ This model applies to: repository changes, institutional documents, public commu
 | Public communications | Carlos | Lumen draft | Carlos |
 | Repo hygiene and cleanup | Viktor | Claude | Carlos (if content) |
 | Status doc updates | Claude or Viktor | — | Carlos |
+
+---
+
+## Evidence Confidence
+
+### Key
+
+| Symbol | Meaning |
+|---|---|
+| ✅ Pub | Confirmed from public repository files |
+| 📋 Legal | Confirmed from legal/state records (private) |
+| 🗣️ Founder | Stated or confirmed by the founder |
+| ⚠️ Conflict | Conflicted — multiple sources disagree |
+| ❓ Unknown | Missing or not verifiable |
+
+### Assessment (this document)
+
+| Claim | Confidence | Source |
+|---|---|---|
+| Roles as described (Garcia, Martin, Kimble, VanKaujk) | ✅ Pub + 🗣️ Founder | `governance/milestones.md`; founder-confirmed |
+| VP legal name is "VanKaujk" | 🗣️ Founder | Confirmed by founder |
+| Branch protection on main (PR-only workflow) | ❓ Unknown | Not confirmed from public repo inspection |
+| Carlos is sole approver of all merges | 🗣️ Founder | Per agent operating model design |
+| Viktor role exists and is actively used | ❓ Unknown | Referenced in docs; activity not confirmed |

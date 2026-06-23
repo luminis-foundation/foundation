@@ -3,6 +3,10 @@
 > Last updated: 2026-06-23
 > Maintained by: Carlos Garcia (President) / Board of Directors
 > Status legend: ✅ Complete | 🔄 In progress | 📋 Planned | ⬜ Future | ❓ Unknown | ⚠️ Gap
+>
+> Evidence confidence key: ✅ Pub = Confirmed from public repo | 📋 Legal = Confirmed from legal/state records (private) | 🗣️ Founder = Founder-confirmed | ⚠️ Conflict = Conflicted / contradicted by another source | ❓ = Missing or unknown
+>
+> **Important:** "Not publicly present in this repo" does not mean "does not exist." Signed bylaws, COI policies, IRS correspondence, and board minutes are expected to exist as private records held by officers. This map documents only what is knowable from public sources or confirmed by the founder.
 
 ---
 
@@ -19,23 +23,25 @@
 | Mailing address | P.O. Box 86, Rowe, NM 87562 | `governance/mission.md` | Public mailing address |
 | Governing law | Chapter 53, Article 8 NMSA 1978 (NM Nonprofit Corporation Act) | `governance/mission.md` | |
 | EIN | Not included in public records | — | Keep private; do not commit |
-| Banking | Not yet established | `governance/roadmap.md` (open item) | ⚠️ Gap |
+| Banking | Pending / needs board-authorized completion | `governance/roadmap.md` (open item) | ⚠️ Gap — 🗣️ Status confirmed as not yet established |
 
 ---
 
 ## 2. Governance
 
+> **Note:** Documents marked "not publicly present" may exist as private records held by officers. Absence from this public repository does not confirm non-existence. Signed bylaws, COI policies, and meeting minutes are standard private governance records.
+
 | Document | Status | Source | Owner | Next Action |
 |---|---|---|---|---|
-| Certificate of Incorporation | ✅ Issued Mar 16, 2026 | `governance/milestones.md` | Carlos Garcia | Keep in private records |
-| Bylaws | ✅ Adopted Mar 19, 2026 | `governance/milestones.md` | Board | Consider redacted public summary |
-| Conflict-of-interest policy | ✅ Adopted Mar 19, 2026 | `governance/milestones.md` | Board | Consider committing redacted version |
+| Certificate of Incorporation | ✅ Issued Mar 16, 2026 | `governance/milestones.md` | Carlos Garcia | Not publicly present in repo — keep in private records |
+| Bylaws | ✅ Adopted Mar 19, 2026 | `governance/milestones.md` | Board | Not publicly present in repo — consider redacted public summary |
+| Conflict-of-interest policy | ✅ Adopted Mar 19, 2026 | `governance/milestones.md` | Board | Not publicly present in repo — consider committing redacted version |
 | NM Initial Report | ✅ Filed May 7, 2026 | `governance/milestones.md` | Guillermo Martin | Annual report due each year |
 | Form 1023-EZ | ✅ Filed Jun 9, 2026 | `governance/milestones.md` | Carlos Garcia | Await IRS determination letter |
 | NM-COROS charitable registration | ⬜ Not yet filed | `governance/roadmap.md` (open) | Carlos Garcia | File after 501(c)(3) determination |
-| Board minutes | ⚠️ Not in repo | `governance/board-minutes/` is empty | Board Secretary | Document organizational meeting; store privately |
-| Annual reports | ⚠️ Not yet needed | `governance/annual-reports/` empty | Guillermo Martin | Required each year to NM SOS |
-| Banking infrastructure | ⚠️ Not yet established | Open roadmap item | Adam Kimble | Establish checking + fiscal controls |
+| Board minutes | ⚠️ Not publicly present in repo | `governance/board-minutes/` empty in this repo | Board Secretary | Private records may exist; document organizational meeting; store privately |
+| Annual reports | ⚠️ Not yet needed | `governance/annual-reports/` empty in repo | Guillermo Martin | Not yet due; required each year to NM SOS |
+| Banking infrastructure | ⚠️ Pending / needs board-authorized completion | Open roadmap item | Adam Kimble | Initiate board-authorized banking process |
 | 501(c)(3) determination letter | 📋 Pending IRS | Filed Jun 9, 2026 | IRS / Carlos | Await; do not claim exemption until received |
 
 ---
@@ -46,8 +52,8 @@
 |---|---|---|---|---|
 | Carlos Garcia | President, Founder, Research Director | carlos@luminisfoundationresearch.org | ✅ Active | Primary technical and research lead; single point of failure risk |
 | Guillermo Martin | Secretary | — | ✅ Active | Board minutes and filing responsibilities |
-| Adam Kimble | Treasurer | adam@luminisfoundationresearch.org | ✅ Active | Financial oversight; banking not yet established |
-| Sterling VanKuijk | Vice President | sterling@luminisfoundationresearch.org | ✅ Active | ⚠️ Name spelled "VanKaujk" in some older documents — verify correct spelling |
+| Adam Kimble | Treasurer | adam@luminisfoundationresearch.org | ✅ Active | Financial oversight; banking pending / needs board-authorized completion |
+| Sterling VanKaujk | Vice President | sterling@luminisfoundationresearch.org | ✅ Active | 🗣️ Legal name confirmed by founder as "VanKaujk". ✅ Website surname corrected via luminis-foundation/luminis-foundation.github.io#4 |
 
 **Board gap notes:**
 - No succession plan documented for any officer
@@ -61,7 +67,7 @@
 
 | Site | URL | Status | Owner | Notes |
 |---|---|---|---|---|
-| Foundation website | luminisfoundationresearch.org | ✅ Live | Carlos Garcia | Single-page HTML; good CSP headers; accurate status language |
+| Foundation website | luminisfoundationresearch.org | ✅ Live | Carlos Garcia | Single-page HTML; good CSP headers |
 | MycoSense demo | mycosense.vercel.app | ✅ Live | Carlos Garcia | Simulated/mock data; correctly labeled in UI and README |
 | GitHub org | github.com/luminis-foundation | ✅ Live | Carlos Garcia | Public-facing org; 5 repos |
 
@@ -70,6 +76,7 @@
 - MycoSense status on website: "Prototype planned" ✅ Correct
 - Simulated data disclaimer: Present ✅
 - No CSP issues noted; strict `default-src 'none'` base ✅
+- ✅ **P0 Resolved:** VP surname corrected in website source (index.html) via luminis-foundation/luminis-foundation.github.io#4
 
 ---
 
@@ -77,16 +84,15 @@
 
 | Repository | Purpose | Status | Key Files | Gaps |
 |---|---|---|---|---|
-| `luminis-foundation/foundation` | Institutional records (this repo) | ✅ Active | governance/, research/, knowledge-graph/, risk/, operations/ | Board minutes, annual reports, bylaws text absent |
+| `luminis-foundation/foundation` | Institutional records (this repo) | ✅ Active | governance/, research/, knowledge-graph/, risk/, operations/ | Board minutes, annual reports, bylaws text not publicly present in repo |
 | `luminis-foundation/mycosense` | MycoSense platform (dashboard + firmware + Pi) | ✅ Active | README.md, FIELD_STATUS.md, SECURITY.md, docs/ | Field protocols, calibration docs absent |
 | `luminis-foundation/luminis-foundation-open` | Public research + community | ✅ Active | governance/, research/, field-deployment/ | field-deployment/protocols/, field-deployment/site-specs/ empty; publications/ empty |
-| `luminis-foundation/luminis-foundation.github.io` | Foundation website source | ✅ Active | index.html, luminis-banner.jpg, luminis-logo.jpg | No privacy policy; no contact form |
-| `luminis-foundation/security-hardening` | Security documentation | Unknown | — | Not yet inspected in this audit |
+| `luminis-foundation/luminis-foundation.github.io` | Foundation website source | ✅ Active | index.html, luminis-banner.jpg, luminis-logo.jpg | ✅ VP surname corrected to "VanKaujk" via luminis-foundation/luminis-foundation.github.io#4; no privacy policy; no contact form |
+| `luminis-foundation/security-hardening` | Security documentation | ❓ Unknown | — | Not yet inspected in this audit |
 
 **Repo audit notes:**
-- `luminis-foundation-open` README: "Field deployment (Pecos watershed) — ✅ Building" ⚠️ Potentially misleading; should be "in development / bench-tested; on-site prototype planned"
-- `luminis-foundation-open` README: "organized under IRC §501(c)(3)" ⚠️ Could be misread as confirmed status; should clarify "applied for recognition"
-- Name spelling inconsistency: "VanKuijk" (website) vs "VanKaujk" (milestones, open repo) — unresolved
+- ✅ `luminis-foundation-open` README field deployment and 501(c)(3) language: corrected via luminis-foundation/luminis-foundation-open#6
+- ✅ `luminis-foundation.github.io` VP surname: corrected to "VanKaujk" via luminis-foundation/luminis-foundation.github.io#4
 
 ---
 
@@ -130,10 +136,10 @@
 
 | Record | Status | Date | Notes |
 |---|---|---|---|
-| NM Certificate of Incorporation | ✅ Issued | Mar 16, 2026 | Private — do not commit PDF |
-| Bylaws | ✅ Adopted by Board | Mar 19, 2026 | Private — consider redacted summary |
-| Conflict-of-interest policy | ✅ Adopted by Board | Mar 19, 2026 | Private — consider redacted version |
-| NM Initial Report | ✅ Filed | May 7, 2026 | Adds Sterling VanKuijk as VP |
+| NM Certificate of Incorporation | ✅ Issued | Mar 16, 2026 | Not publicly present in repo — do not commit PDF |
+| Bylaws | ✅ Adopted by Board | Mar 19, 2026 | Not publicly present in repo — consider redacted summary |
+| Conflict-of-interest policy | ✅ Adopted by Board | Mar 19, 2026 | Not publicly present in repo — consider redacted version |
+| NM Initial Report | ✅ Filed | May 7, 2026 | Adds Sterling VanKaujk as VP (✅ website surname corrected via luminis-foundation/luminis-foundation.github.io#4) |
 | Form 1023-EZ | ✅ Filed | Jun 9, 2026 | $275 user fee paid Jun 10; IRS determination pending |
 | NM-COROS registration | ⬜ Not filed | — | Required if soliciting in NM; file after IRS determination |
 | Federal EIN | ❓ Not in public records | — | Do not commit — keep private |
@@ -151,7 +157,7 @@
 **Funding gaps:**
 - No operational budget documented
 - No financial reserves
-- Banking not yet established
+- Banking pending / needs board-authorized completion
 - No major grant strategy documented
 - No earned revenue model
 - No donor acknowledgment process documented
@@ -162,7 +168,9 @@
 
 | Title | Authors | Year | DOI | License | Status |
 |---|---|---|---|---|---|
-| Bridging Mycelium-Inspired Decentralized Computing and Symbiotic Plant–Fungal–AI Bio-Hybrid Systems in Northern New Mexico's High-Desert Ecosystems | Garcia, Kimble, Martin, VanKuijk | 2026 | [10.5281/zenodo.20143391](https://doi.org/10.5281/zenodo.20143391) | CC-BY-4.0 | Preprint (Zenodo) |
+| Bridging Mycelium-Inspired Decentralized Computing and Symbiotic Plant–Fungal–AI Bio-Hybrid Systems in Northern New Mexico's High-Desert Ecosystems | Garcia, Kimble, Martin, VanKaujk | 2026 | [10.5281/zenodo.20143391](https://doi.org/10.5281/zenodo.20143391) | CC-BY-4.0 | Preprint (Zenodo) |
+
+> **⚠️ Author name note:** Correct legal name is "VanKaujk" (founder-confirmed). If the Zenodo submission listed "VanKuijk," a Zenodo metadata correction request should be submitted. Do not assume the preprint is correct until the Zenodo record is verified.
 
 **Publication gaps:**
 - No follow-on empirical publications
@@ -203,8 +211,8 @@
 | Question | Category | Owner | Priority |
 |---|---|---|---|
 | Has an EIN been assigned by the IRS? | Legal/compliance | Carlos Garcia | P0 |
-| Has banking been established? If not, what is blocking it? | Finance | Adam Kimble | P0 |
-| Is "VanKuijk" or "VanKaujk" the correct spelling? Which is legal name? | Governance records | Guillermo Martin | P1 |
+| What specifically is blocking banking establishment, and who has board authorization to initiate it? | Finance | Adam Kimble | P0 |
+| Does the Zenodo preprint list "VanKuijk" or "VanKaujk" as the author? | Records | Carlos Garcia | P1 |
 | When is the NM-COROS charitable registration required? | Legal/compliance | Carlos Garcia | P1 |
 | Are there bench-test data logs from ESP32/Pi that should be preserved? | Research/data | Carlos Garcia | P1 |
 | What is the specific electrode array model and part number? | Hardware | Carlos Garcia | P1 |
@@ -250,11 +258,49 @@
 
 | Decision | Deadline | Owner | Stakes |
 |---|---|---|---|
-| Establish banking | ASAP — blocks financial operations | Adam Kimble | Cannot receive grants, manage expenses, or pay fees |
+| Initiate banking (pending / needs board-authorized completion) | ASAP — blocks financial operations | Adam Kimble | Cannot receive grants, manage expenses, or pay fees |
+| ✅ Fix VP surname in website source: luminis-foundation.github.io/index.html | Resolved | Carlos Garcia | Corrected via luminis-foundation/luminis-foundation.github.io#4 |
+| Verify Zenodo preprint VP author name; request Zenodo correction if listed as "VanKuijk" | P1 | Carlos Garcia | Author record accuracy; must align with confirmed legal name |
 | Determine NM-COROS registration requirement | After 501(c)(3) determination | Carlos Garcia | Legal compliance for NM charitable solicitation |
-| Correct VanKuijk/VanKaujk name across all repos | P1 | Guillermo Martin | Consistency in legal and public records |
-| Revise luminis-foundation-open README field deployment status language | P1 | Carlos Garcia | Risk of overclaiming to funders/public |
+| ✅ Revise luminis-foundation-open README: field deployment and 501(c)(3) language | Resolved | Carlos Garcia | Corrected via luminis-foundation/luminis-foundation-open#6 |
 | Set Step 3 deployment date | P1 | Carlos Garcia | Unlocks research program, grant eligibility |
 | Draft and adopt financial controls policy | P1 | Adam Kimble | Required for IRS compliance and grant accountability |
 | Draft field and calibration protocols | Before Step 3 | Carlos Garcia | Research credibility; data quality |
 | Decide board expansion strategy | P2 | Board | Governance resilience; diverse expertise |
+
+---
+
+## Evidence Confidence
+
+### Key
+
+| Symbol | Meaning |
+|---|---|
+| ✅ Pub | Confirmed from public repository files |
+| 📋 Legal | Confirmed from legal/state records (private — not in this public repo) |
+| 🗣️ Founder | Stated or confirmed by the founder |
+| ⚠️ Conflict | Conflicted — multiple sources give different information |
+| ❓ Unknown | Missing or not verifiable from available public sources |
+
+### Assessment
+
+| Claim | Confidence | Source |
+|---|---|---|
+| NM Entity ID 0008089293, formed March 16, 2026 | ✅ Pub | `governance/mission.md`, `governance/milestones.md` |
+| Bylaws adopted March 19, 2026 | ✅ Pub | `governance/milestones.md` |
+| COI policy adopted March 19, 2026 | ✅ Pub | `governance/milestones.md` |
+| NM Initial Report filed May 7, 2026 | ✅ Pub | `governance/milestones.md` |
+| Form 1023-EZ filed June 9, 2026; $275 fee June 10 | ✅ Pub | `governance/milestones.md` |
+| 501(c)(3) applied for — determination not yet received | ✅ Pub | `governance/milestones.md`; website |
+| VP legal name is "VanKaujk" | ✅ Pub + 🗣️ Founder | Confirmed by founder; website corrected via luminis-foundation/luminis-foundation.github.io#4 |
+| Website VP surname corrected to "VanKaujk" | ✅ Pub | luminis-foundation/luminis-foundation.github.io#4 merged |
+| luminis-foundation-open README overclaims corrected | ✅ Pub | luminis-foundation/luminis-foundation-open#6 merged |
+| Banking not yet established | 🗣️ Founder | Open item in `governance/roadmap.md`; confirmed as pending |
+| EIN assigned or not | ❓ Unknown | Not in public records; keep private |
+| ESP32 + Pi bench-validated end-to-end | ✅ Pub | `mycosense/FIELD_STATUS.md` |
+| Step 3 on-site deployment is planned, not started | ✅ Pub | `mycosense/FIELD_STATUS.md` |
+| No validated public field dataset | ✅ Pub | `research/datasets/` empty; FIELD_STATUS.md confirms |
+| Preprint published — DOI 10.5281/zenodo.20143391 | ✅ Pub | `governance/milestones.md` |
+| Awesome Foundation grant pending ($1,000) | ✅ Pub | `governance/grants.md` |
+| Bylaws / COI text / board minutes exist | ❓ Unknown (public) / 📋 Legal (private) | Not publicly present in repo; existence inferred from milestones |
+| Zenodo preprint author spelling | ⚠️ Unverified | Needs manual check; correction request may be needed |
