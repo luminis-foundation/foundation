@@ -167,11 +167,11 @@
 
 ## 10. Publications
 
-| Title | Authors | Year | DOI | License | Status |
+| Title | Authors / Record | Year | DOI | License | Status |
 |---|---|---|---|---|---|
-| Bridging Mycelium-Inspired Decentralized Computing and Symbiotic Plant–Fungal–AI Bio-Hybrid Systems in Northern New Mexico's High-Desert Ecosystems | Garcia, Kimble, Martin, VanKaujk | 2026 | [10.5281/zenodo.20143391](https://doi.org/10.5281/zenodo.20143391) | CC-BY-4.0 | Preprint (Zenodo) |
+| Bridging Mycelium-Inspired Decentralized Computing and Symbiotic Plant–Fungal–AI Bio-Hybrid Systems in Northern New Mexico's High-Desert Ecosystems | Carlos Garcia | 2026 | [10.5281/zenodo.20143391](https://doi.org/10.5281/zenodo.20143391) | CC-BY-4.0 | Preprint (Zenodo) |
 
-> **Zenodo author note (reviewed 2026-06-23):** Current known author record is Carlos Garcia, President / Founder / Research Director. No VanKuijk/VanKaujk correction is needed unless Zenodo metadata contains that discrepancy.
+> **Zenodo author note (reviewed 2026-06-23):** Current known Zenodo author record is Carlos Garcia, President / Founder / Research Director. No VanKaujk correction is needed unless Zenodo metadata contains that discrepancy.
 
 **Publication gaps:**
 - No follow-on empirical publications
@@ -234,7 +234,7 @@
 | Financial controls policy (formal adoption) | Required for grant accountability | Review draft at `governance/financial-controls-policy.md`; adopt by Board resolution |
 | Field protocol documents | Research credibility; needed before deployment | Draft in `research/protocols/` |
 | Calibration protocol | Data quality for any future dataset | Framework exists; final protocol pending funding |
-| Data management plan | Required by many funders | Brainstorm exists; final plan pending Carlos decisions |
+| Data management plan | Required by many funders | Comprehensive brainstorm created at `research/data-management-security-brainstorm.md` (2026-06-23); covers classification, lifecycle, security, incident response, Zenodo process; 10 open questions pending Carlos/Board answers; final plan pending decisions |
 | Site agreements/permits | Required before field deployment | Confirm land access |
 | Research ethics review | May be required for ecological sensing | Determine if IRB/IEC needed |
 
