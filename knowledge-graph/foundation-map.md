@@ -234,7 +234,7 @@
 | Financial controls policy (formal adoption) | Required for grant accountability | Review draft at `governance/financial-controls-policy.md`; adopt by Board resolution |
 | Field protocol documents | Research credibility; needed before deployment | Draft in `research/protocols/` |
 | Calibration protocol | Data quality for any future dataset | Framework exists; final protocol pending funding |
-| Data management plan | Required by many funders | Comprehensive brainstorm created at `research/data-management-security-brainstorm.md` (2026-06-23); covers classification, lifecycle, security, incident response, Zenodo process; 10 open questions pending Carlos/Board answers; final plan pending decisions |
+| Data management plan | Required by many funders | Comprehensive brainstorm at `research/data-management-security-brainstorm.md`; founder draft answers at `research/data-management-founder-answers.md` (2026-06-23); 9 of 10 questions answered (calibration evidence pending final decision); Data Custodian: Carlos Garcia (Research Director); offline-first storage; CC-BY-4.0 default license; Board approval required for public releases; final DMP pending Board review |
 | Site agreements/permits | Required before field deployment | Confirm land access |
 | Research ethics review | May be required for ecological sensing | Determine if IRB/IEC needed |
 

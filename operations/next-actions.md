@@ -42,7 +42,8 @@
 |---|---|---|---|---|---|
 | P1 | Review calibration protocol framework | Carlos Garcia | Small | Draft framework at `research/protocols/calibration-protocol-framework.md`; final thresholds are funding-dependent | Carlos Garcia reviews framework; equipment list confirmed; final validated protocol deferred to post-funding |
 | P1 | Review field data quality SOP framework | Carlos Garcia | Small | Draft framework at `research/protocols/field-data-quality-sop-framework.md`; final thresholds are funding-dependent | Carlos Garcia reviews framework; metadata requirements confirmed; pilot data needed before final thresholds |
-| P1 | Review data management and security brainstorm; answer open questions | Carlos Garcia | Medium | Data management/security brainstorm created — pending Carlos/Board answers and final policy drafting. Brainstorm at `research/data-management-security-brainstorm.md`; Carlos needs to answer 10 open questions before final policy can be drafted | Open questions answered; final data management policy ready to draft |
+| P1 | Review data management and security brainstorm; answer open questions | Carlos Garcia | Medium | Data management founder draft answers added — pending Board review. Founder answers at `research/data-management-founder-answers.md`; brainstorm updated at `research/data-management-security-brainstorm.md`. Calibration evidence question still pending final decision. Board must review and formally adopt before final policy drafting. | Board reviews founder answers; final data management policy ready to draft |
+| P1 | Draft final Data Management Plan and Data Security Policy after Carlos/Board answers are reviewed | Carlos Garcia | Medium | Founder draft answers committed 2026-06-23; Board review needed before final policy | Final DMP and security policy adopted by Board |
 | P1 | Define metadata schema | Carlos Garcia | Small | Required before any dataset is collected | JSON schema committed to `research/protocols/metadata-schema.json` |
 | P1 | Add publication record to `research/publications/` | Carlos Garcia | Small | Repository is empty; preprint DOI should be documented | `research/publications/2026-zenodo-20143391.md` committed |
 | P2 | Design TinyML classifier architecture | Carlos Garcia | Large | Mid-term research milestone per `governance/roadmap.md` | Classifier architecture documented; training approach defined |
@@ -151,7 +152,7 @@ Ranked by institutional value. Each is scoped, executable, and produces a commit
 | 1 | **Review calibration protocol framework** | Carlos Garcia reviews `research/protocols/calibration-protocol-framework.md` — confirm equipment list, approve metadata requirements, note any corrections; framework is funding-dependent and cannot be finalized without pilot data | Carlos review notes documented | — |
 | 2 | **Review field data quality SOP framework** | Carlos Garcia reviews `research/protocols/field-data-quality-sop-framework.md` — confirm field notes template, metadata requirements, and NTP requirements; final thresholds deferred to post-pilot | Carlos review notes documented | — |
 | 3 | **Add publication record** | Create `research/publications/2026-zenodo-20143391.md` with full citation, abstract summary, CC-BY license note, and relationship to MycoSense | Publication record committed | `docs/publication-records` |
-| 4 | **Answer data management open questions** | Review `research/data-management-security-brainstorm.md` — answer the 10 open questions (cloud backup service, GPS precision, access roles, encryption, retention period); answers feed into final data management policy | Open questions answered; final policy ready to draft | — |
+| 4 | **Answer data management open questions** | Founder draft answers provided 2026-06-23 at `research/data-management-founder-answers.md`; Board review needed; calibration evidence question pending final decision | Board reviews and adopts answers; final policy ready to draft | Founder answers committed |
 | 5 | ✅ **Fix P0 website + open-repo public-claims errors** | (a) luminis-foundation/luminis-foundation.github.io#4: VP surname VanKuijk → VanKaujk — merged. (b) luminis-foundation/luminis-foundation-open#6: README field deployment and 501(c)(3) language corrected — merged | ✅ Both PRs merged | `fix/vp-surname-vankaujk`, `fix/readme-public-claims` |
 | 6 | **Draft board meeting agenda template** | Create a reusable board meeting agenda template in `governance/board-minutes/` covering standard NM nonprofit agenda items | Template committed | `docs/board-meeting-template` |
 | 7 | **Write volunteer contribution agreement** | Draft a simple 1-page volunteer contributor agreement covering IP assignment, scope, and Foundation IP | Agreement template committed | `docs/volunteer-agreement` |
@@ -186,7 +187,7 @@ Complete all items before submitting any grant application. Review with Carlos G
 |---|---|---|
 | Review calibration protocol framework (`research/protocols/calibration-protocol-framework.md`) | Carlos Garcia | ⬜ Pending Carlos review |
 | Review field data quality SOP framework (`research/protocols/field-data-quality-sop-framework.md`) | Carlos Garcia | ⬜ Pending Carlos review |
-| Write data management plan (from brainstorm at `research/data-management-security-brainstorm.md`) | Carlos Garcia | ⬜ Pending open-question answers |
+| Write data management plan (from brainstorm at `research/data-management-security-brainstorm.md`) | Carlos Garcia | ⬜ Founder draft answers added — pending Board review before final plan |
 | Adopt financial controls policy (`governance/financial-controls-policy.md`) | Board | ⬜ Pending Board review |
 | Draft redacted bylaws summary for public repo | Carlos Garcia | ⬜ Pending |
 | Confirm board minutes are being recorded and stored privately | Guillermo Martin | ⬜ Pending |
@@ -217,6 +218,6 @@ Do not include or attach the following in any materials committed to a public re
 | Financial controls policy adopted | ⬜ Pending Board adoption of draft at `governance/financial-controls-policy.md` |
 | Website public-claims accurate | ✅ Done — VP surname corrected via luminis-foundation.github.io#4; README overclaims corrected via luminis-foundation-open#6 |
 | Research protocols documented | ⬜ Frameworks committed; final protocols funding-dependent |
-| Data management plan | ⬜ Brainstorm committed; final plan pending Carlos decisions |
+| Data management plan | ⬜ Founder draft answers added; final plan pending Board review |
 | Field data exists | ❌ Simulated only — Step 3 not yet started |
 | Funder-required empirical data | ❌ Step 3 not yet started |

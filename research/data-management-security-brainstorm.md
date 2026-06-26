@@ -10,6 +10,15 @@
 
 ---
 
+## Guiding Principle
+
+> **Private by default. Public by proof.**
+
+- **Private by default:** Raw data, calibration records, exact node locations, credentials, and operational records stay private.
+- **Public by proof:** Only validated, sanitized, reviewed, approved, and documented datasets become public.
+
+---
+
 ## Section 1 — Purpose
 
 The purpose of this document is to design the Foundation's data trust layer — the policies, classifications, workflows, and safeguards that govern how data is created, stored, protected, shared, and released across the Foundation's research and operational activities.
@@ -339,26 +348,132 @@ The following incidents require immediate response:
 
 ---
 
-## Section 14 — Open Questions for Carlos / Board
+## Section 14 — Open Questions for Carlos / Board (with Founder Draft Answers)
 
-The following questions must be answered before a final Data Management Plan can be drafted:
+> **Status:** Founder draft answers provided 2026-06-23. Pending Board review and formal adoption.
+> **Full answers:** See `research/data-management-founder-answers.md`
 
-1. **Where will private raw sensor data be stored initially?** (Local encrypted drive? Officer's computer? Private cloud folder?)
-2. **Who besides Carlos can access private research data?** (Any officer? Only Research Director? Named individuals?)
-3. **Who is the official data custodian?** (Is this the Research Director by default, or should a separate role be created?)
-4. **Should exact node locations ever be published?** (If so, under what conditions and what precision?)
-5. **What cloud storage, if any, is acceptable?** (Backblaze B2? Encrypted Dropbox? AWS S3? None until funded?)
-6. **What backup interval is realistic?** (After every session? Weekly? Monthly?)
-7. **What license should public datasets use?** (CC-BY-4.0? CC0? ODbL?)
-8. **What data should be published first: summaries, processed data, or raw data?**
-9. **Should the Board approve every public dataset release?** (Or can the Research Director approve routine releases with Board oversight?)
-10. **What minimum calibration evidence is required before public release?** (Pass/fail? Reference equipment traceable to NIST? Peer review of calibration method?)
+The following questions were identified during the brainstorm. Carlos Garcia has provided draft answers. The Board should review and formally adopt or modify these positions.
+
+### 14.1 — Where will private raw sensor data be stored initially?
+
+**Founder answer:** Encrypted local external hard drives, offline by default.
+
+- Primary encrypted external drive held by Research Director / Data Custodian
+- Backup encrypted external drive held by a second authorized officer
+- Optional cold archive stored offline in a secure physical location
+- Raw sensor data should not be stored in public GitHub, Slack, normal email, or public cloud storage
+
+### 14.2 — Who besides Carlos can access private research data?
+
+**Founder answer:** Access may be granted to:
+
+- Carlos Garcia, President / Founder / Research Director
+- Authorized officers as needed for governance, continuity, and oversight
+- Vetted contributors interested in contributing research data
+- Potential Board-approved collaborators
+
+Access should be least-privilege and project-specific. External collaborators should not receive exact node locations or unrestricted raw archives unless explicitly approved.
+
+### 14.3 — Who is the official data custodian?
+
+**Founder answer:** The Research Director serves as the official Data Custodian.
+
+> Carlos Garcia, President / Founder / Research Director, serves as initial Data Custodian for Luminis Foundation research data.
+
+### 14.4 — Should exact node locations ever be published?
+
+**Founder answer:** No. Exact node locations should never be published publicly.
+
+Reasons: hardware protection, anti-theft protection, site privacy, research integrity, ecological/site security.
+
+Public materials may use generalized language: Rowe, New Mexico; Pecos watershed region; controlled on-site prototype deployment site. GPS coordinates, site maps, access routes, and identifiable node-placement details are excluded from publication.
+
+### 14.5 — What cloud storage, if any, is acceptable?
+
+**Founder answer:** Raw/private research data should remain offline-first and local-first at the current stage.
+
+Cloud infrastructure is not accepted for raw/private sensor data until the Board approves a secure architecture. Cloud may be acceptable later for public-safe summaries, published datasets, Zenodo releases, encrypted backups (if approved), public documentation, and open-source code.
+
+Future cloud approval must address encryption, access control, MFA, backup/export ability, audit logs, vendor lock-in, data sovereignty, and alignment with the Foundation's offline-first mission.
+
+### 14.6 — What backup interval is realistic?
+
+**Founder answer:** Cycle-based backup and integrity checks.
+
+- **After every field/session collection:** Copy raw data to primary archive; create SHA-256 hash manifest; record session metadata
+- **Weekly during active data collection:** Verify working backup exists; confirm no obvious corruption; review folder organization
+- **Monthly:** Full archive verification; compare primary and backup drive manifests; review access log / data log
+- **Every 6 months:** Restore test from backup; storage-health audit; decide whether to migrate aging drives
+- **Annually:** Archive review; retention decision; public-release candidate review; Board-level data governance review
+
+### 14.7 — What license should public datasets use?
+
+**Founder answer:** Default proposed license: **CC-BY-4.0**
+
+Keep as a Board decision before final adoption. CC-BY-4.0 allows reuse while preserving attribution.
+
+### 14.8 — What data should be published first: summaries, processed data, or raw data?
+
+**Founder answer:** Summaries first, processed data second, raw data last if ever appropriate.
+
+1. Academic-quality summaries
+2. Public-safe aggregate reports
+3. Processed / quality-reviewed datasets
+4. Raw or near-raw data only if sanitized, validated, stripped of sensitive details, and Board-approved
+
+### 14.9 — Should the Board approve every public dataset release?
+
+**Founder answer:** Yes. No public dataset release may occur without Research Director review and Board approval.
+
+Routine minor corrections to already-published datasets may be handled by the Research Director if the Board later adopts that delegation.
+
+### 14.10 — What minimum calibration evidence is required before public release?
+
+**Founder answer:** Pending final Carlos/Board decision.
+
+Minimum calibration evidence is not finalized. No public dataset release should occur until the calibration method, hardware identity, firmware version, reference method, drift review, and Research Director signoff are documented.
+
+Proposed minimum evidence checklist:
+
+- [ ] Device ID
+- [ ] Sensor/electrode configuration
+- [ ] Firmware version
+- [ ] Pi gateway software version
+- [ ] Calibration date/time
+- [ ] Calibration operator
+- [ ] Reference method or reference equipment used
+- [ ] Pre/post calibration readings
+- [ ] Drift notes
+- [ ] Pass/fail result
+- [ ] Research Director review
+- [ ] Board approval if dataset release is planned
 
 These answers will directly shape the final `research/data-management-plan.md` and `research/data-security-policy.md`.
 
 ---
 
-## Section 15 — Recommended Final Policy Structure
+## Section 15 — Future Directions
+
+### Local Research Server
+
+The Foundation intends to eventually move from encrypted external drives to a local, low-power, eco-conscious research server once funding and infrastructure allow.
+
+> Future infrastructure may include a local eco-conscious research server for encrypted storage, local model training, dataset preparation, and offline AI research workflows. This server should remain LAN-only unless the Board approves a secure remote-access architecture.
+
+### Offline Model Training
+
+Sensor data may eventually be used to train Foundation-controlled offline models after validation, sanitization, and Board-approved research procedures are in place.
+
+Safeguards:
+
+- No model training on unreviewed raw data for public claims
+- No public model release using sensitive site data
+- Model training must preserve site privacy and data integrity
+
+---
+
+## Section 16 — Recommended Final Policy Structure
 
 When this brainstorm is reviewed and the open questions are answered, the following final documents should be drafted and adopted:
 
