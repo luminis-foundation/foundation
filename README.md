@@ -10,11 +10,12 @@ This is the Foundation's internal institutional record — governance documents,
 
 ```
 foundation/
-├── governance/          # Mission, milestones, roadmap, grants, board records
-├── research/            # Publications, dataset records, field protocols
+├── governance/          # Mission, milestones, roadmap, grants, board records, compliance calendar, policies
+├── research/            # Publications, dataset records, field protocols, data management & security policies
 ├── knowledge-graph/     # Institutional map — entities, relationships, status
 ├── risk/                # Institutional attack surface analysis
-├── operations/          # Agent operating model, next actions backlog
+├── operations/          # Agent operating model, next actions, access/DR/incident-response policies
+├── docs/                # ADRs, architecture diagrams, accessibility checklist
 ├── README.md            # This file
 └── repo-structure.md    # GitHub organization structure decision record
 ```
@@ -51,9 +52,20 @@ foundation/
 | `governance/mission.md` | Legal mission statement and entity details |
 | `governance/roadmap.md` | Forward-looking strategic priorities (Board draft) |
 | `governance/financial-controls-policy.md` | Financial controls policy draft (pending Board adoption) |
+| `governance/board-adoption-records/financial-controls-adoption-template.md` | Board adoption-record template (makes draft policies operative) |
+| `governance/compliance-calendar.md` | Recurring legal/financial/governance obligations (draft) |
+| `governance/privacy-retention-deletion-policy.md` | Privacy/PII retention & deletion policy + GDPR/HIPAA memo (draft) |
+| `operations/github-access-and-branch-protection-policy.md` | Access matrix, branch protection, secret-scanning runbooks (draft) |
+| `operations/disaster-recovery-rto-rpo.md` | RTO/RPO targets and disaster recovery runbooks (draft) |
+| `operations/incident-response-plan.md` | Incident severity tiers, notification chain, playbooks (draft) |
+| `research/data-management-plan.md` | Formal Data Management Plan (draft, pending Board adoption) |
+| `research/data-security-policy.md` | Formal Data Security Policy (draft, pending Board adoption) |
 | `research/protocols/calibration-protocol-framework.md` | Calibration planning framework (funding-dependent) |
 | `research/protocols/field-data-quality-sop-framework.md` | Field data quality planning framework (funding-dependent) |
 | `research/data-management-security-brainstorm.md` | Data management and security design brainstorm |
+| `docs/adr/` | Architecture Decision Records (public/private boundary, local-first data) |
+| `docs/architecture/mycosense-system-architecture.md` | MycoSense system architecture, data path, and trust boundaries |
+| `docs/accessibility-checklist.md` | WCAG 2.1 AA checklist for website and dashboard (draft) |
 
 ## Foundation Status at a Glance
 
